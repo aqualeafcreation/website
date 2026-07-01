@@ -1,7 +1,11 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 import styles from './Hero.module.css'
+
+// Dark, high-contrast aquarium image
+const HERO_IMAGE = 'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=1920&q=90&fit=crop'
 
 export default function Hero() {
   const bgRef = useRef(null)
@@ -10,7 +14,7 @@ export default function Hero() {
     const onScroll = () => {
       if (!bgRef.current) return
       if (window.scrollY < window.innerHeight) {
-        bgRef.current.style.transform = `scale(1.08) translateY(${window.scrollY * 0.12}px)`
+        bgRef.current.style.transform = `scale(1.05) translateY(${window.scrollY * 0.1}px)`
       }
     }
     window.addEventListener('scroll', onScroll, { passive: true })
@@ -19,23 +23,33 @@ export default function Hero() {
 
   return (
     <section className={styles.hero} id="hero">
-      <div className={styles.bg} ref={bgRef} />
+      {/* Background Image */}
+      <div className={styles.bgWrap} ref={bgRef}>
+        <Image
+          src={HERO_IMAGE}
+          alt="Dark minimalist aquarium"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center', filter: 'grayscale(0.3) contrast(1.2)' }}
+        />
+      </div>
+
       <div className={styles.overlay} />
-      <div className={styles.grainHero} />
 
       <div className={styles.content}>
-        <p className={styles.eyebrow}>Aqua Leaf Creation — Est. 2024</p>
+        <p className={styles.eyebrow}>SYS.01 // AQUA LEAF CREATION</p>
         <h1 className={styles.title}>
-          Living <em>Architecture</em><br />for Modern Spaces.
+          NATURE.<br />
+          <span className={styles.highlight}>ENGINEERED.</span>
         </h1>
         <p className={styles.sub}>
-          Bespoke Aquascapes &amp; Terrariums — Chhatrapati Sambhajinagar
+          High-contrast aquascapes for minimalist environments.
         </p>
       </div>
 
       <div className={styles.scrollIndicator}>
-        <span className={styles.scrollText}>Scroll to Discover</span>
-        <div className={styles.scrollLine} />
+        <div className={styles.scrollDot} />
       </div>
     </section>
   )

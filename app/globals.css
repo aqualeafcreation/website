@@ -1,32 +1,21 @@
 /* ================================================================
    AQUA LEAF CREATION — Global CSS
-   Design System: Heritage Modern / Architectural Studio
+   Design System: Minimalist Neon / Cyberpunk Clean
    ================================================================ */
 
-/* ---- Google Fonts Fallback (next/font handles actual loading) ---- */
 :root {
   /* --- Color Palette --- */
-  --parchment:        #F5F0E8;
-  --parchment-warm:   #EDE7D9;
-  --parchment-deep:   #E4DDD0;
-  --graphite:         #2C2C2A;
-  --graphite-mid:     #4A4A46;
-  --graphite-light:   #7A7A75;
-  --graphite-ghost:   #C8C4BB;
-  --brass:            #B8924A;
-  --brass-light:      #D4A96A;
-  --brass-dark:       #8F6E35;
-  --terracotta:       #B5623A;
-  --section-grey:     #E8E3D9;
-
+  --bg-color:         #0a0a0a;
+  --bg-color-alt:     #111111;
+  --text-primary:     #ffffff;
+  --text-secondary:   #888888;
+  --text-ghost:       #333333;
+  --neon-green:       #39FF14;
+  --neon-green-dim:   rgba(57, 255, 20, 0.15);
+  
   /* --- Typography --- */
-  --font-serif: var(--font-serif, 'Georgia', serif);
   --font-sans:  var(--font-sans, system-ui, sans-serif);
   --font-mono:  var(--font-mono, 'Courier New', monospace);
-
-  /* --- Grid Lines --- */
-  --grid-line:        rgba(44, 44, 42, 0.07);
-  --grid-line-strong: rgba(44, 44, 42, 0.13);
 
   /* --- Transitions --- */
   --ease-slow: 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -46,119 +35,47 @@ html {
 }
 
 body {
-  background-color: var(--parchment);
-  color: var(--graphite);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
   font-family: var(--font-sans);
   font-weight: 300;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   overflow-x: hidden;
   cursor: none;
-  transition: background-color 0.6s ease;
 }
 
 /* ---- Scrollbar ---- */
-::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: var(--parchment); }
-::-webkit-scrollbar-thumb { background: var(--brass); }
-
-/* ---- Blueprint Grid Background (fixed) ---- */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-  background-size: 80px 80px;
-}
-
-/* ---- Grain Overlay (fixed) ---- */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 9998;
-  pointer-events: none;
-  opacity: 0.028;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 300px 300px;
-  animation: grain 0.45s steps(2) infinite;
-}
-
-@keyframes grain {
-  0%   { transform: translate(0, 0); }
-  25%  { transform: translate(-3px, 1px); }
-  50%  { transform: translate(2px, -2px); }
-  75%  { transform: translate(-1px, 3px); }
-  100% { transform: translate(3px, -1px); }
-}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-color); }
+::-webkit-scrollbar-thumb { background: var(--neon-green); }
 
 /* ---- Utility Classes ---- */
-.serif { font-family: var(--font-serif) !important; }
 .mono  { font-family: var(--font-mono) !important; }
 .sans  { font-family: var(--font-sans) !important; }
 
 .section-label {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--graphite-light);
+  color: var(--neon-green);
   margin-bottom: 1.6rem;
+  display: inline-block;
 }
 
 .thin-rule {
-  width: 40px;
-  height: 1px;
-  background: var(--brass);
-  margin-bottom: 1.6rem;
-}
-
-/* ---- Section Divider ---- */
-.sectionDivider {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 1px;
-  background: var(--grid-line-strong);
-}
-
-.sectionDivider::before {
-  content: attr(data-label);
-  position: absolute;
-  left: 5vw;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--parchment);
-  padding: 0 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--graphite-ghost);
-}
-
-.sectionDivider::after {
-  content: attr(data-num);
-  position: absolute;
-  right: 5vw;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--parchment);
-  padding: 0 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
-  color: var(--graphite-ghost);
+  width: 60px;
+  height: 2px;
+  background: var(--neon-green);
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px var(--neon-green-dim);
 }
 
 /* ---- Scroll Reveal Animations ---- */
 .reveal {
   opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .reveal.visible {
   opacity: 1;
@@ -169,33 +86,28 @@ body::after {
 .reveal-d3 { transition-delay: 0.3s; }
 .reveal-d4 { transition-delay: 0.4s; }
 
-/* ---- Custom Cursor ---- */
+/* ---- Custom Cursor (Neon Dot) ---- */
 .cursor {
   position: fixed;
-  width: 10px;
-  height: 10px;
-  background: var(--brass);
+  width: 8px;
+  height: 8px;
+  background: var(--neon-green);
   border-radius: 50%;
   pointer-events: none;
   z-index: 99999;
   transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease;
-  mix-blend-mode: multiply;
+  transition: width 0.2s ease, height 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 12px var(--neon-green);
 }
 .cursorRing {
-  position: fixed;
-  width: 36px;
-  height: 36px;
-  border: 1px solid var(--brass);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99998;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
-  opacity: 0.6;
+  display: none; /* Removed the ring for a more minimalist look */
 }
-.cursor.cursorHover { width: 6px; height: 6px; }
-.cursorRing.cursorHover { width: 52px; height: 52px; border-color: var(--terracotta); }
+.cursor.cursorHover { 
+  width: 24px; 
+  height: 24px; 
+  background: transparent;
+  border: 1px solid var(--neon-green);
+}
 
 /* ---- Progress Bar ---- */
 .progressBar {
@@ -203,7 +115,8 @@ body::after {
   top: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--brass), var(--terracotta));
+  background: var(--neon-green);
+  box-shadow: 0 0 8px var(--neon-green);
   z-index: 10001;
   width: 0%;
   transition: width 0.1s linear;
@@ -211,46 +124,17 @@ body::after {
 
 /* ---- Navbar Scrolled State (global — toggled by ClientEffects.js) ---- */
 #navbar.scrolled {
-  background: rgba(245, 240, 232, 0.93);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(57, 255, 20, 0.1);
 }
-
-/* ---- Social Links ---- */
-.socialLinks {
-  display: flex;
-  gap: 0.8rem;
-  margin-top: 1.6rem;
-}
-.socialLink {
-  width: 34px;
-  height: 34px;
-  border: 1px solid rgba(255,255,255,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: all var(--ease-med);
-  cursor: none;
-}
-.socialLink:hover {
-  border-color: var(--brass);
-  background: rgba(184,146,74,0.1);
-}
-.socialLink svg {
-  width: 14px;
-  height: 14px;
-  stroke: rgba(237,231,217,0.6);
-  fill: none;
-  stroke-width: 1.5;
-}
-.socialLink:hover svg { stroke: var(--brass-light); }
 
 /* ---- Mobile Overlay ---- */
 .mobileOverlay {
   position: fixed;
   inset: 0;
-  background: rgba(245,240,232,0.98);
+  background: rgba(10,10,10,0.98);
   z-index: 9990;
   display: flex;
   flex-direction: column;
@@ -266,24 +150,26 @@ body::after {
   pointer-events: all;
 }
 .mobileOverlay a {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 2.2rem;
-  font-weight: 300;
-  color: var(--graphite);
+  font-weight: 700;
+  color: var(--text-primary);
   text-decoration: none;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.02em;
   transition: color var(--ease-med);
 }
-.mobileOverlay a:hover { color: var(--brass); }
+.mobileOverlay a:hover { color: var(--neon-green); }
 .mobileClose {
   position: absolute;
   top: 1.8rem;
   right: 5vw;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   letter-spacing: 0.2em;
   cursor: none;
-  color: var(--graphite-light);
+  color: var(--text-secondary);
   background: none;
   border: none;
+  text-transform: uppercase;
 }
+.mobileClose:hover { color: var(--neon-green); }

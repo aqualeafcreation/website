@@ -1,63 +1,34 @@
 'use client'
 
-import { useState } from 'react'
-import Link from 'next/link'
 import styles from './Navbar.module.css'
 
-const exhibitions = [
-  { label: 'Planted Aquarium — Dutch',      href: '#exhibition-dutch' },
-  { label: 'Planted Aquarium — Hardscape',  href: '#exhibition-hardscape' },
-  { label: 'Terrarium',                     href: '#exhibition-terrarium' },
-  { label: 'Paludarium',                    href: '#exhibition-paludarium' },
-]
-
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false)
-
-  const close = () => { setMobileOpen(false); document.body.style.overflow = '' }
-  const open  = () => { setMobileOpen(true);  document.body.style.overflow = 'hidden' }
+  const toggleMobileMenu = () => {
+    document.getElementById('mobile-menu').classList.toggle('open')
+  }
 
   return (
     <>
-      <nav className={styles.navbar} id="navbar">
-        <Link href="#hero" className={styles.logo} onClick={close}>
-          Aqua Leaf <span>Creation</span>
-        </Link>
+      <nav className={styles.nav} id="navbar">
+        <div className={styles.logo}>
+          <a href="#">Aqua Leaf Creation</a>
+        </div>
 
-        <ul className={styles.navLinks}>
-          <li><a href="#hero">Home</a></li>
-
-          <li className={styles.dropdown}>
-            <a href="#exhibitions">The Exhibitions <span className={styles.arrow}>▾</span></a>
-            <ul className={styles.dropdownMenu} role="menu">
-              {exhibitions.map((ex) => (
-                <li key={ex.href} role="menuitem">
-                  <a href={ex.href}>{ex.label}</a>
-                </li>
-              ))}
-            </ul>
-          </li>
-
-          <li><a href="#philosophy">The Studio</a></li>
-          <li><a href="#booking" className={styles.cta}>Booking</a></li>
-        </ul>
-
-        <button
-          className={styles.hamburger}
-          onClick={open}
-          aria-label="Open navigation menu"
-        >
-          <span /><span /><span />
+        {/* Global menu trigger */}
+        <button className={styles.mobileTrigger} onClick={toggleMobileMenu} aria-label="Open menu">
+          [ menu ]
         </button>
       </nav>
 
-      {/* Mobile overlay */}
-      <div className={`mobileOverlay ${mobileOpen ? 'open' : ''}`}>
-        <button className="mobileClose" onClick={close}>[ Close ]</button>
-        <a href="#hero"         onClick={close}>Home</a>
-        <a href="#exhibitions"  onClick={close}>The Exhibitions</a>
-        <a href="#philosophy"   onClick={close}>The Studio</a>
-        <a href="#booking"      onClick={close}>Booking</a>
+      {/* Full-screen overlay */}
+      <div className="mobileOverlay" id="mobile-menu">
+        <button className="mobileClose" onClick={toggleMobileMenu} aria-label="Close menu">
+          [ close ]
+        </button>
+        <a href="#hero" onClick={toggleMobileMenu}>Home</a>
+        <a href="#philosophy" onClick={toggleMobileMenu}>Philosophy</a>
+        <a href="#exhibitions" onClick={toggleMobileMenu}>Exhibitions</a>
+        <a href="#booking" onClick={toggleMobileMenu}>Contact</a>
       </div>
     </>
   )

@@ -62,18 +62,6 @@ export default function ClientEffects() {
     )
     revealEls.forEach(el => observer.observe(el))
 
-    // Exhibitions section body BG shift
-    const exSection = document.getElementById('exhibitions')
-    if (exSection) {
-      const bgObs = new IntersectionObserver(
-        (entries) => entries.forEach(e => {
-          document.body.style.backgroundColor = e.isIntersecting ? '#E8E3D9' : '#F5F0E8'
-        }),
-        { threshold: 0.1 }
-      )
-      bgObs.observe(exSection)
-    }
-
     return () => {
       window.removeEventListener('mousemove', onMove)
       window.removeEventListener('scroll', onScroll)

@@ -1,164 +1,44 @@
 .section {
   position: relative;
   z-index: 1;
-  padding: 9rem 5vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8vw;
-  border-top: 1px solid var(--grid-line-strong);
-}
-
-/* Info */
-.heading {
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 3.6rem);
-  font-weight: 300;
-  line-height: 1.15;
-  margin-bottom: 2rem;
-}
-.heading em { font-style: italic; color: var(--brass); }
-
-.desc {
-  font-size: 0.88rem;
-  line-height: 1.88;
-  color: var(--graphite-mid);
-  margin-bottom: 3rem;
-  max-width: 380px;
-}
-
-.contactList {
-  list-style: none;
+  padding: 8rem 5vw;
+  background: var(--bg-color-alt);
   display: flex;
   flex-direction: column;
-  gap: 1.3rem;
-}
-.contactList li {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-.contactLabel {
-  font-family: var(--font-mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--brass);
-  min-width: 72px;
-  padding-top: 2px;
-}
-.contactVal {
-  font-size: 0.87rem;
-  color: var(--graphite-mid);
-  line-height: 1.65;
-}
-.contactVal a {
-  color: var(--graphite-mid);
-  text-decoration: none;
-  transition: color 0.4s ease;
-}
-.contactVal a:hover { color: var(--brass); }
-
-/* Form */
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-}
-
-/* Field */
-.field {
-  position: relative;
-  border: 1px solid var(--grid-line-strong);
-  margin: -1px -1px 0 0;
-  transition: border-color 0.35s ease;
-}
-.field:focus-within { border-color: var(--brass); z-index: 2; }
-
-.full { grid-column: 1 / -1; }
-
-.label {
-  position: absolute;
-  top: 1rem;
-  left: 1.2rem;
-  font-family: var(--font-mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--graphite-light);
-  pointer-events: none;
-  transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
-}
-.field:focus-within .label { top: 0.45rem; font-size: 0.48rem; color: var(--brass); }
-
-.input,
-.select,
-.textarea {
-  width: 100%;
-  padding: 1.75rem 1.2rem 0.65rem;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  color: var(--graphite);
-  appearance: none;
-  -webkit-appearance: none;
-}
-.textarea { resize: vertical; min-height: 110px; }
-
-/* Submit */
-.submit {
-  border: 1px solid var(--brass);
-  background: transparent;
-  padding: 1.4rem 2rem;
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  cursor: none;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.4s ease;
-  margin-top: 0;
+  text-align: center;
+  border-top: 1px solid var(--text-ghost);
 }
-.submit::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--brass);
-  transform: translateX(-101%);
-  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-.submit:hover::before { transform: translateX(0); }
 
-.submitText {
+.heading {
+  font-family: var(--font-sans);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+}
+
+.contactBlock {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--brass);
-  position: relative;
-  z-index: 1;
-  transition: color 0.35s ease;
+  font-size: 0.9rem;
+  line-height: 2;
+  color: var(--text-secondary);
 }
-.submit:hover .submitText { color: var(--parchment); }
 
-.submitArrow {
-  font-size: 1.2rem;
-  color: var(--brass);
-  position: relative;
-  z-index: 1;
-  transition: color 0.35s ease, transform 0.35s ease;
+.socialLink {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--neon-green);
+  text-decoration: none;
+  transition: text-shadow var(--ease-med);
 }
-.submit:hover .submitArrow { color: var(--parchment); transform: translateX(6px); }
+.socialLink:hover {
+  text-shadow: 0 0 10px var(--neon-green-dim);
+}
 
-/* Responsive */
 @media (max-width: 900px) {
-  .section { grid-template-columns: 1fr; padding: 5rem 5vw; gap: 4rem; }
-  .row { grid-template-columns: 1fr; }
+  .section {
+    padding: 5rem 5vw;
+  }
 }
