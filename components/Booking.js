@@ -14,7 +14,7 @@ export default function Booking() {
           <p>+91 99999 99999</p>
           <p>Chhatrapati Sambhajinagar, MH</p>
           <a href="https://instagram.com/aqualeafcreation" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-            // INSTAGRAM
+            {'// INSTAGRAM'}
           </a>
         </div>
       </div>
