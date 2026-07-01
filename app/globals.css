@@ -1,0 +1,282 @@
+/* ================================================================
+   AQUA LEAF CREATION — Global CSS
+   Design System: Heritage Modern / Architectural Studio
+   ================================================================ */
+
+/* ---- Google Fonts Fallback (next/font handles actual loading) ---- */
+:root {
+  /* --- Color Palette --- */
+  --parchment:        #F5F0E8;
+  --parchment-warm:   #EDE7D9;
+  --parchment-deep:   #E4DDD0;
+  --graphite:         #2C2C2A;
+  --graphite-mid:     #4A4A46;
+  --graphite-light:   #7A7A75;
+  --graphite-ghost:   #C8C4BB;
+  --brass:            #B8924A;
+  --brass-light:      #D4A96A;
+  --brass-dark:       #8F6E35;
+  --terracotta:       #B5623A;
+  --section-grey:     #E8E3D9;
+
+  /* --- Typography --- */
+  --font-serif: var(--font-serif, 'Georgia', serif);
+  --font-sans:  var(--font-sans, system-ui, sans-serif);
+  --font-mono:  var(--font-mono, 'Courier New', monospace);
+
+  /* --- Grid Lines --- */
+  --grid-line:        rgba(44, 44, 42, 0.07);
+  --grid-line-strong: rgba(44, 44, 42, 0.13);
+
+  /* --- Transitions --- */
+  --ease-slow: 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-med:  0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--parchment);
+  color: var(--graphite);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  overflow-x: hidden;
+  cursor: none;
+  transition: background-color 0.6s ease;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--parchment); }
+::-webkit-scrollbar-thumb { background: var(--brass); }
+
+/* ---- Blueprint Grid Background (fixed) ---- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* ---- Grain Overlay (fixed) ---- */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 300px 300px;
+  animation: grain 0.45s steps(2) infinite;
+}
+
+@keyframes grain {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(-3px, 1px); }
+  50%  { transform: translate(2px, -2px); }
+  75%  { transform: translate(-1px, 3px); }
+  100% { transform: translate(3px, -1px); }
+}
+
+/* ---- Utility Classes ---- */
+.serif { font-family: var(--font-serif) !important; }
+.mono  { font-family: var(--font-mono) !important; }
+.sans  { font-family: var(--font-sans) !important; }
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--graphite-light);
+  margin-bottom: 1.6rem;
+}
+
+.thin-rule {
+  width: 40px;
+  height: 1px;
+  background: var(--brass);
+  margin-bottom: 1.6rem;
+}
+
+/* ---- Section Divider ---- */
+.sectionDivider {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 1px;
+  background: var(--grid-line-strong);
+}
+
+.sectionDivider::before {
+  content: attr(data-label);
+  position: absolute;
+  left: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--parchment);
+  padding: 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--graphite-ghost);
+}
+
+.sectionDivider::after {
+  content: attr(data-num);
+  position: absolute;
+  right: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--parchment);
+  padding: 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: var(--graphite-ghost);
+}
+
+/* ---- Scroll Reveal Animations ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+.reveal-d4 { transition-delay: 0.4s; }
+
+/* ---- Custom Cursor ---- */
+.cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: var(--brass);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  mix-blend-mode: multiply;
+}
+.cursorRing {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--brass);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+  opacity: 0.6;
+}
+.cursor.cursorHover { width: 6px; height: 6px; }
+.cursorRing.cursorHover { width: 52px; height: 52px; border-color: var(--terracotta); }
+
+/* ---- Progress Bar ---- */
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brass), var(--terracotta));
+  z-index: 10001;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* ---- Social Links ---- */
+.socialLinks {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.6rem;
+}
+.socialLink {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all var(--ease-med);
+  cursor: none;
+}
+.socialLink:hover {
+  border-color: var(--brass);
+  background: rgba(184,146,74,0.1);
+}
+.socialLink svg {
+  width: 14px;
+  height: 14px;
+  stroke: rgba(237,231,217,0.6);
+  fill: none;
+  stroke-width: 1.5;
+}
+.socialLink:hover svg { stroke: var(--brass-light); }
+
+/* ---- Mobile Overlay ---- */
+.mobileOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(245,240,232,0.98);
+  z-index: 9990;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--ease-med);
+}
+.mobileOverlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.mobileOverlay a {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--graphite);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color var(--ease-med);
+}
+.mobileOverlay a:hover { color: var(--brass); }
+.mobileClose {
+  position: absolute;
+  top: 1.8rem;
+  right: 5vw;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  cursor: none;
+  color: var(--graphite-light);
+  background: none;
+  border: none;
+}

@@ -1,0 +1,54 @@
+.strip {
+  position: relative;
+  z-index: 1;
+  padding: 7rem 5vw;
+  background: var(--graphite);
+  text-align: center;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Blueprint grid on dark background */
+.strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.quote {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.5vw, 3rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--parchment-warm);
+  max-width: 820px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+.mark {
+  font-size: 5rem;
+  line-height: 0;
+  color: var(--brass);
+  opacity: 0.35;
+  vertical-align: -0.3em;
+}
+
+.attribution {
+  position: relative;
+  z-index: 1;
+  margin-top: 2.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--graphite-light);
+}
