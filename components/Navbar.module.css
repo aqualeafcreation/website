@@ -11,11 +11,7 @@
   transition: background 0.4s ease, backdrop-filter 0.4s ease;
 }
 
-:global(#navbar.scrolled) {
-  background: rgba(245, 240, 232, 0.93);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
+/* scrolled state is applied globally — see globals.css #navbar.scrolled */
 
 /* Logo */
 .logo {

@@ -209,6 +209,13 @@ body::after {
   transition: width 0.1s linear;
 }
 
+/* ---- Navbar Scrolled State (global — toggled by ClientEffects.js) ---- */
+#navbar.scrolled {
+  background: rgba(245, 240, 232, 0.93);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
 /* ---- Social Links ---- */
 .socialLinks {
   display: flex;
