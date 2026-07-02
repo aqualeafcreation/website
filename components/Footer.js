@@ -5,8 +5,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.grid}>
         <div>
-          <p className={styles.brandName}>AQUA LEAF CREATION</p>
-          <p className={styles.tagline}>SYS.INIT_2024</p>
+          <p className={styles.tagline}>EST. 2024</p>
         </div>
 
         <div className={styles.links}>
@@ -19,7 +18,7 @@ export default function Footer() {
 
       <div className={styles.bottom}>
         <p className={styles.copy}>
-          © 2024 AQUA LEAF CREATION. ALL RIGHTS RESERVED.
+          © 2024 AquaLeaf Creation. ALL RIGHTS RESERVED.
         </p>
         <p className={styles.location}>
           <span className={styles.dot} /> CHHATRAPATI SAMBHAJINAGAR

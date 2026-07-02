@@ -38,13 +38,13 @@ export default function Hero() {
       <div className={styles.overlay} />
 
       <div className={styles.content}>
-        <p className={styles.eyebrow}>SYS.01 // AQUA LEAF CREATION</p>
+        <p className={styles.eyebrow}>AquaLeaf Creation</p>
         <h1 className={styles.title}>
-          NATURE.<br />
-          <span className={styles.highlight}>ENGINEERED.</span>
+          LIVING<br />
+          <span className={styles.highlight}>ARCHITECTURE.</span>
         </h1>
         <p className={styles.sub}>
-          High-contrast aquascapes for minimalist environments.
+          Creating nature is the ultimate luxury.
         </p>
       </div>
 

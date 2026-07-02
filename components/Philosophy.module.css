@@ -1,66 +1,47 @@
 .section {
   position: relative;
-  z-index: 1;
-  padding: 8rem 5vw;
-  background: var(--bg-color-alt);
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8vw;
-  max-width: 1400px;
-  margin: 0 auto;
-  align-items: center;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-}
-
-.heading {
-  font-family: var(--font-sans);
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 2rem;
-  letter-spacing: -0.02em;
-}
-
-.text {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-secondary);
-  max-width: 500px;
+  width: 100%;
+  background: var(--bg-color);
+  padding: 0;
 }
 
 .imageWrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 100vh;
+  min-height: 700px;
   overflow: hidden;
-  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Subtle neon overlay on the image */
+/* Gradient fade to integrate the image with the black background seamlessly */
 .imageOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(45deg, var(--neon-green-dim), transparent);
-  mix-blend-mode: overlay;
-  pointer-events: none;
+  background: linear-gradient(to bottom, #000000 0%, transparent 30%, rgba(0,0,0,0.8) 100%);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 5vw;
+}
+
+.heading {
+  font-family: var(--font-sans);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 @media (max-width: 900px) {
-  .section {
-    padding: 5rem 5vw;
-  }
-  .container {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-  }
   .imageWrap {
-    aspect-ratio: 16 / 9;
+    height: 80vh;
   }
 }

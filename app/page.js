@@ -14,12 +14,12 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <div className="sectionDivider" data-label="The Studio" data-num="§ 01" />
+
         <Philosophy />
-        <div className="sectionDivider" data-label="The Exhibitions" data-num="§ 02" />
+
         <Exhibitions />
         <QuoteStrip />
-        <div className="sectionDivider" data-label="The Sanctum" data-num="§ 04" />
+
         <Booking />
       </main>
       <Footer />

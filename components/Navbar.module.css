@@ -2,41 +2,43 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 1.5rem 5vw;
+  padding: 2rem 5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 9990;
   border-bottom: 1px solid transparent;
-  transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
 }
 
 /* Logo */
 .logo a {
   font-family: var(--font-sans);
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--text-primary);
   text-decoration: none;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.15em;
   transition: color var(--ease-med);
 }
 .logo a:hover {
-  color: var(--neon-green);
+  color: var(--highlight-neon);
 }
 
 /* Global menu trigger */
 .mobileTrigger {
   display: block;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
   background: none;
   border: none;
-  cursor: none;
+  cursor: pointer;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
+  transition: color var(--ease-med);
 }
 .mobileTrigger:hover {
-  color: var(--neon-green);
+  color: var(--highlight-neon);
 }

@@ -16,18 +16,18 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata = {
-  title: 'Aqua Leaf Creation — Minimalist Living Architecture',
+  title: 'AquaLeaf Creation — Minimalist Living Architecture',
   description:
-    'Aqua Leaf Creation crafts bespoke aquascapes and terrariums — living artworks that merge botanical mastery with architectural intention. Based in Chhatrapati Sambhajinagar, Maharashtra.',
+    'AquaLeaf Creation crafts bespoke aquascapes and terrariums — living artworks that merge botanical mastery with architectural intention. Based in Chhatrapati Sambhajinagar, Maharashtra.',
   keywords:
     'aquascaping, terrarium, paludarium, planted aquarium, bespoke aquarium, Dutch aquarium, hardscape, Chhatrapati Sambhajinagar, aqualeafcreation',
   metadataBase: new URL('https://aqualeafcreation.in'),
   openGraph: {
-    title: 'Aqua Leaf Creation — Minimalist Living Architecture',
+    title: 'AquaLeaf Creation — Minimalist Living Architecture',
     description:
       'Bespoke aquascapes and terrariums crafted with architectural precision in Chhatrapati Sambhajinagar, Maharashtra.',
     url: 'https://aqualeafcreation.in',
-    siteName: 'Aqua Leaf Creation',
+    siteName: 'AquaLeaf Creation',
     locale: 'en_IN',
     type: 'website',
   },

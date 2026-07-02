@@ -2,17 +2,16 @@
   position: relative;
   z-index: 1;
   padding: 8rem 5vw;
-  background: var(--bg-color-alt);
+  background: var(--bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-top: 1px solid var(--text-ghost);
 }
 
 .heading {
   font-family: var(--font-sans);
-  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-primary);
@@ -20,21 +19,26 @@
 }
 
 .contactBlock {
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
   line-height: 2;
-  color: var(--text-secondary);
+  color: #dddddd;
+  font-weight: 300;
 }
 
 .socialLink {
   display: inline-block;
-  margin-top: 2rem;
-  color: var(--neon-green);
+  margin-top: 3rem;
+  color: var(--highlight-neon);
   text-decoration: none;
-  transition: text-shadow var(--ease-med);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  font-size: 1rem;
+  transition: color var(--ease-med), text-shadow var(--ease-med);
 }
 .socialLink:hover {
-  text-shadow: 0 0 10px var(--neon-green-dim);
+  color: #ffffff;
+  text-shadow: 0 0 15px var(--highlight-neon);
 }
 
 @media (max-width: 900px) {

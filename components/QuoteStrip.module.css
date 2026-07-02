@@ -1,32 +1,32 @@
-.strip {
+.quoteStrip {
   padding: 10rem 5vw;
   background: var(--bg-color);
   text-align: center;
-  border-top: 1px solid var(--text-ghost);
-  border-bottom: 1px solid var(--text-ghost);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .quote {
   font-family: var(--font-sans);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  color: var(--text-primary);
-  max-width: 800px;
-  margin: 0 auto;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 300;
   line-height: 1.3;
-  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  max-width: 1000px;
+  margin-bottom: 2rem;
 }
 
-.attribution {
-  margin-top: 3rem;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.3em;
-  color: var(--neon-green);
+.author {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--highlight-neon);
+  letter-spacing: 0.1em;
 }
 
-@media (max-width: 900px) {
-  .strip {
+@media (max-width: 768px) {
+  .quoteStrip {
     padding: 6rem 5vw;
   }
 }
