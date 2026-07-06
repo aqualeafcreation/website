@@ -46,7 +46,7 @@
 /* ── Number ─────────────────────────────────────────────────── */
 .panelNum {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 0.5em;
   color: rgba(180, 130, 20, 0.45);
@@ -123,9 +123,9 @@
 /* ── Category label ─────────────────────────────────────────── */
 .panelCategory {
   font-family: var(--font-display);
-  font-size: 0.6rem;
+  font-size: 1.2rem;
   font-weight: 400;
-  letter-spacing: 0.42em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(235, 195, 85, 1);
   margin-bottom: 2rem;
@@ -232,7 +232,7 @@
 /* Small number */
 .imgNum {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 0.5em;
   color: rgba(255,255,255,0.85);
