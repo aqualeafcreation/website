@@ -64,8 +64,10 @@ export default function RootLayout({ children }) {
       className={`${marcellus.variable} ${montserrat.variable} ${bodoni.variable} ${playfair.variable}`}
     >
       <body>
-        <ClientEffects />
-        {children}
+        <div id="app-wrapper">
+          <ClientEffects />
+          {children}
+        </div>
       </body>
     </html>
   )
