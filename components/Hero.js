@@ -22,15 +22,16 @@ export default function Hero() {
 
   return (
     <section className={styles.hero} id="hero">
+      <div className={`${styles.heroLogoWrap} reveal`}>
+        <img src="/logo.svg" alt="AquaLeaf Logo" className={styles.heroLogo} />
+      </div>
+
       {/* Luxury Ambient Dark Glow Background */}
       <div className={styles.ambientGlow}></div>
 
       <div className={styles.overlay} />
 
       <div className={styles.content}>
-        <div className="reveal" style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.2rem' }}>
-          <img src="/logo.svg" alt="AquaLeaf Logo" style={{ height: '85px', width: 'auto', filter: 'drop-shadow(0 0 15px rgba(0,0,0,0.8))' }} />
-        </div>
         <h1 className={`${styles.title} reveal`}>
           AquaLeaf Creation
         </h1>

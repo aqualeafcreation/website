@@ -4,10 +4,24 @@
   height: 100svh;
   min-height: 600px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   background: #000;
+}
+
+.heroLogoWrap {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+}
+
+.heroLogo {
+  height: 140px;
+  width: auto;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 20px rgba(212, 163, 64, 0.4));
 }
 
 .ambientGlow {
@@ -18,12 +32,13 @@
     rgba(212, 163, 64, 0.15) 0%, 
     rgba(0, 0, 0, 1) 60%
   );
-  z-index: 1;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .content {
   position: relative;
-  z-index: 2;
+  z-index: 20;
   text-align: center;
   max-width: 800px;
   padding: 0 5vw;
@@ -116,4 +131,5 @@
 
 @media (max-width: 768px) {
   .title { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .heroLogo { height: 85px; }
 }
