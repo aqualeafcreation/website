@@ -1,7 +1,7 @@
 .section {
   position: relative;
   z-index: 1;
-  padding: 8rem 5vw;
+  padding: 6rem 5vw;
   background: var(--bg-color-alt);
 }
 
@@ -10,11 +10,12 @@
 }
 
 .title {
-  font-family: var(--font-sans);
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  color: rgba(245,240,230,0.85);
 }
 
 .steps {
@@ -36,38 +37,41 @@
 
 .stepNum {
   display: block;
-  font-family: var(--font-serif);
-  font-size: 3.5rem;
-  font-style: italic;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
   font-weight: 400;
-  color: var(--text-ghost);
-  margin-bottom: 2rem;
-  transition: color var(--ease-med), text-shadow var(--ease-med);
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.06);
+  margin-bottom: 1.2rem;
+  transition: color var(--ease-med);
 }
 
 .step:hover .stepNum {
-  background: linear-gradient(-70deg, #B38728 0%, #FBF5B7 40%, #FFFFFF 50%, #FBF5B7 60%, #B38728 100%);
-  background-size: 200% auto;
+  background: linear-gradient(160deg, #5a3d00 0%, #c49a20 30%, #e8c060 50%, #c49a20 70%, #5a3d00 100%);
+  background-size: 280% auto;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: shine 3s linear infinite;
-  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
+  animation: shine 4s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(180, 130, 20, 0.3));
 }
 
 .stepTitle {
-  font-family: var(--font-sans);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(245,240,230,0.88);
+  margin-bottom: 0.7rem;
 }
 
 .stepDesc {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.8;
+  color: rgba(170,160,140,0.8);
   font-family: var(--font-sans);
+  letter-spacing: 0.03em;
 }
 
 @media (max-width: 900px) {

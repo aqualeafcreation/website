@@ -40,11 +40,10 @@ export default function Hero() {
       <div className={styles.content}>
         <p className={styles.eyebrow}>AquaLeaf Creation</p>
         <h1 className={styles.title}>
-          Living<br />
-          <span className={styles.highlight}>Architecture.</span>
+          Living <span className={styles.highlight}>Architecture</span>
         </h1>
         <p className={styles.sub}>
-          Creating nature is the ultimate luxury.
+          Bespoke aquascapes and terrariums -<br/>nature sculpted as the ultimate luxury.
         </p>
       </div>
 

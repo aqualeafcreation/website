@@ -1,65 +1,77 @@
 /* ================================================================
    AQUA LEAF CREATION — Global CSS
    Design System: Immersive Scrolling Landing Page
+   Fonts: Cinzel | Raleway | Cormorant Garamond | Playfair Display
    ================================================================ */
 
 :root {
   /* --- Color Palette --- */
   --bg-color:         #000000;
   --bg-color-alt:     #050505;
-  --text-primary:     #f8f8f8;
-  --text-secondary:   #aaaaaa;
+  --text-primary:     #f0ebe0;
+  --text-secondary:   #b0a898;
   --text-ghost:       #222222;
-  --highlight-neon:   #FFC000; /* Lavish Golden Neon */
-  --highlight-dim:    rgba(255, 192, 0, 0.25);
-  --highlight-glow:   rgba(255, 192, 0, 0.6);
-  
+
+  /* Dark golden — visible even on dim screens */
+  --highlight-neon:   #c9951a;
+  --highlight-dim:    rgba(180, 130, 20, 0.25);
+  --highlight-glow:   rgba(180, 130, 20, 0.45);
+
+  /* Gold gradient stops */
+  --gold-dark:  #5a3d00;
+  --gold-mid:   #c49a20;
+  --gold-light: #e8c060;
+  --gold-pale:  #f5d980;
+
   /* --- Typography --- */
-  --font-heading: var(--font-heading, 'Jost', sans-serif);
-  --font-sans:    var(--font-sans, 'Inter', sans-serif);
-  --font-serif:   var(--font-serif, 'Playfair Display', serif);
+  --font-display:  var(--font-display,  'Cinzel',              sans-serif);
+  --font-sans:     var(--font-sans,     'Raleway',             sans-serif);
+  --font-heading:  var(--font-heading,  'Cormorant Garamond',  serif);
+  --font-cursive:  var(--font-cursive,  'Playfair Display',    serif);
 
   /* --- Transitions --- */
   --ease-slow: 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
   --ease-med:  0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-/* ---- Shimmering Gold Utility ---- */
+/* ---- Dark Gold Shimmer Utility ---- */
 .shimmer-text {
   background: linear-gradient(
-    -70deg,
-    #B38728 0%,
-    #FBF5B7 40%,
-    #FFFFFF 50%,
-    #FBF5B7 60%,
-    #B38728 100%
+    160deg,
+    var(--gold-dark)  0%,
+    var(--gold-mid)   25%,
+    var(--gold-light) 45%,
+    var(--gold-pale)  50%,
+    var(--gold-light) 55%,
+    var(--gold-mid)   75%,
+    var(--gold-dark)  100%
   );
-  background-size: 200% auto;
+  background-size: 280% auto;
   color: transparent !important;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: shine 3s linear infinite;
+  animation: shine 4s linear infinite;
   display: inline-block;
-  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
+  filter: drop-shadow(0 0 6px rgba(180, 130, 20, 0.3));
 }
 
 .shimmer-bg {
   background: linear-gradient(
-    -70deg,
-    #B38728 0%,
-    #FBF5B7 40%,
-    #FFFFFF 50%,
-    #FBF5B7 60%,
-    #B38728 100%
+    160deg,
+    var(--gold-dark)  0%,
+    var(--gold-mid)   25%,
+    var(--gold-light) 45%,
+    var(--gold-pale)  50%,
+    var(--gold-light) 55%,
+    var(--gold-mid)   75%,
+    var(--gold-dark)  100%
   );
-  background-size: 200% auto;
-  animation: shine 3s linear infinite;
+  background-size: 280% auto;
+  animation: shine 4s linear infinite;
 }
 
 @keyframes shine {
-  to {
-    background-position: 200% center;
-  }
+  to { background-position: 280% center; }
 }
 
 /* ---- Reset ---- */
@@ -79,56 +91,64 @@ body {
   color: var(--text-primary);
   font-family: var(--font-sans);
   font-weight: 300;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   overflow-x: hidden;
 }
 
 /* ---- Scrollbar ---- */
-::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg-color); }
-::-webkit-scrollbar-thumb { background: #333; }
+::-webkit-scrollbar-thumb { background: #2a2510; }
 ::-webkit-scrollbar-thumb:hover { background: var(--highlight-neon); }
 
 /* ---- Utility Classes ---- */
-.serif { font-family: var(--font-serif) !important; }
-.sans  { font-family: var(--font-sans) !important; }
+.serif   { font-family: var(--font-cursive) !important; }
+.sans    { font-family: var(--font-sans) !important; }
 .heading-font { font-family: var(--font-heading) !important; }
+.display-font { font-family: var(--font-display) !important; }
 
-/* Clean titles */
+/* Clean section labels — spaced caps in Cinzel */
 .section-label {
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.25em;
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  
-  /* Apply shimmer manually for label */
-  background: linear-gradient(-70deg, #B38728 0%, #FBF5B7 40%, #FFFFFF 50%, #FBF5B7 60%, #B38728 100%);
-  background-size: 200% auto;
+
+  background: linear-gradient(
+    160deg,
+    var(--gold-dark) 0%,
+    var(--gold-mid)  30%,
+    var(--gold-light) 50%,
+    var(--gold-mid)  70%,
+    var(--gold-dark) 100%
+  );
+  background-size: 280% auto;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: shine 3s linear infinite;
-  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.3));
+  animation: shine 4s linear infinite;
+  opacity: 0.85;
 
   margin-bottom: 1rem;
   display: inline-block;
 }
 
-/* ---- Scroll Reveal Animations ---- */
+/* ---- Scroll Reveal Animations — Cinematic ---- */
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(32px);
+  transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
-.reveal-d1 { transition-delay: 0.1s; }
-.reveal-d2 { transition-delay: 0.2s; }
-.reveal-d3 { transition-delay: 0.3s; }
-.reveal-d4 { transition-delay: 0.4s; }
+.reveal-d1 { transition-delay: 0.15s; }
+.reveal-d2 { transition-delay: 0.35s; }
+.reveal-d3 { transition-delay: 0.55s; }
+.reveal-d4 { transition-delay: 0.75s; }
 
 /* ---- Progress Bar ---- */
 .progressBar {
@@ -136,10 +156,15 @@ body {
   top: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(-70deg, #B38728 0%, #FBF5B7 40%, #FFFFFF 50%, #FBF5B7 60%, #B38728 100%);
-  background-size: 200% auto;
-  animation: shine 2s linear infinite;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  background: linear-gradient(
+    160deg,
+    var(--gold-dark) 0%,
+    var(--gold-light) 50%,
+    var(--gold-dark) 100%
+  );
+  background-size: 280% auto;
+  animation: shine 3s linear infinite;
+  box-shadow: 0 0 8px rgba(180, 130, 20, 0.5);
   z-index: 10001;
   width: 0%;
   transition: width 0.1s linear;
@@ -147,10 +172,10 @@ body {
 
 /* ---- Navbar Scrolled State ---- */
 #navbar.scrolled {
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(180, 130, 20, 0.08);
 }
 
 /* ---- Mobile Overlay ---- */
@@ -163,7 +188,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--ease-med);
@@ -173,12 +198,12 @@ body {
   pointer-events: all;
 }
 .mobileOverlay a {
-  font-family: var(--font-sans);
-  font-size: 2rem;
-  font-weight: 400;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 300;
   color: var(--text-primary);
   text-decoration: none;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   transition: color var(--ease-med);
 }
@@ -187,9 +212,9 @@ body {
   position: absolute;
   top: 1.8rem;
   right: 5vw;
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
   cursor: pointer;
   color: var(--text-secondary);
   background: none;

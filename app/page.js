@@ -3,7 +3,6 @@ import Hero from '@/components/Hero'
 import Philosophy from '@/components/Philosophy'
 import Exhibitions from '@/components/Exhibitions'
 import QuoteStrip from '@/components/QuoteStrip'
-import Booking from '@/components/Booking'
 import Footer from '@/components/Footer'
 import ClientEffects from '@/components/ClientEffects'
 
@@ -19,8 +18,6 @@ export default function Home() {
 
         <Exhibitions />
         <QuoteStrip />
-
-        <Booking />
       </main>
       <Footer />
     </>

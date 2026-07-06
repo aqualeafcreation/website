@@ -1,39 +1,51 @@
-import { Jost, Inter, Playfair_Display } from 'next/font/google'
+import { Marcellus, Montserrat, Bodoni_Moda, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
-const jost = Jost({
+/* Premium Display (for the 3D titles and logos) */
+const marcellus = Marcellus({
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  variable: '--font-heading',
+  weight: ['400'],
+  variable: '--font-display',
   display: 'swap',
 })
 
-const inter = Inter({
+/* Clean Modern UI / Sublines */
+const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['200', '300', '400'],
+  weight: ['200', '300', '400', '500'],
   variable: '--font-sans',
   display: 'swap',
 })
 
+/* High-end Editorial / Quotes */
+const bodoni = Bodoni_Moda({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-heading',
+  display: 'swap',
+})
+
+/* Elegant serif for Quotes */
 const playfair = Playfair_Display({
   subsets: ['latin'],
   style: ['normal', 'italic'],
-  weight: ['400'],
-  variable: '--font-serif',
+  weight: ['400', '500'],
+  variable: '--font-cursive',
   display: 'swap',
 })
 
 export const metadata = {
-  title: 'AquaLeaf Creation — Minimalist Living Architecture',
+  title: 'AquaLeaf Creation | Premium Aquarium & Fish Tank in Chhatrapati Sambhajinagar',
   description:
-    'AquaLeaf Creation crafts bespoke aquascapes and terrariums — living artworks that merge botanical mastery with architectural intention. Based in Chhatrapati Sambhajinagar, Maharashtra.',
+    'AquaLeaf Creation crafts bespoke aquascapes, luxury aquariums, fish tanks, and terrariums. Living artworks merging botanical mastery with architectural intention in Chhatrapati Sambhajinagar, Maharashtra.',
   keywords:
-    'aquascaping, terrarium, paludarium, planted aquarium, bespoke aquarium, Dutch aquarium, hardscape, Chhatrapati Sambhajinagar, aqualeafcreation',
+    'aquarium, fish tank, aquascaping, terrarium, paludarium, planted aquarium, bespoke aquarium, Dutch aquarium, hardscape, Chhatrapati Sambhajinagar, aqualeafcreation, luxury aquarium, nature aquarium',
   metadataBase: new URL('https://aqualeafcreation.in'),
   openGraph: {
-    title: 'AquaLeaf Creation — Minimalist Living Architecture',
+    title: 'AquaLeaf Creation | Premium Aquarium & Fish Tank in Chhatrapati Sambhajinagar',
     description:
-      'Bespoke aquascapes and terrariums crafted with architectural precision in Chhatrapati Sambhajinagar, Maharashtra.',
+      'Bespoke aquascapes, luxury fish tanks, and terrariums crafted with architectural precision in Chhatrapati Sambhajinagar, Maharashtra.',
     url: 'https://aqualeafcreation.in',
     siteName: 'AquaLeaf Creation',
     locale: 'en_IN',
@@ -43,9 +55,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
+      <html
       lang="en"
-      className={`${jost.variable} ${inter.variable} ${playfair.variable}`}
+      className={`${marcellus.variable} ${montserrat.variable} ${bodoni.variable} ${playfair.variable}`}
     >
       <body>{children}</body>
     </html>

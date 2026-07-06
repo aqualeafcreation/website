@@ -6,7 +6,7 @@ export default function QuoteStrip() {
       <p className={`${styles.quote} reveal`}>
         &ldquo;An Aquascaping is not just a tank, its a living canvas, painted with plants, stones, and water.&rdquo;
       </p>
-      <p className={`${styles.author} reveal reveal-d2`}>— AquaLeaf Creation</p>
+      <p className={`${styles.author} reveal reveal-d2`}>- AquaLeaf Creation</p>
     </div>
   )
 }

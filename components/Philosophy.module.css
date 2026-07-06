@@ -20,7 +20,9 @@
 .imageOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, #000000 0%, transparent 30%, rgba(0,0,0,0.8) 100%);
+  background:
+    linear-gradient(to bottom, #000000 0%, transparent 22%, rgba(0,0,0,0.5) 78%, #000000 100%),
+    radial-gradient(ellipse 80% 70% at 50% 50%, transparent 30%, rgba(0,0,0,0.55) 80%, rgba(0,0,0,0.9) 100%);
   z-index: 1;
 }
 
@@ -32,13 +34,13 @@
 }
 
 .heading {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-style: italic;
-  font-size: clamp(3rem, 6vw, 4.5rem);
-  font-weight: 400;
-  line-height: 1.2;
-  color: var(--text-primary);
-  letter-spacing: -0.02em;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.25;
+  color: rgba(245,240,230,0.92);
+  letter-spacing: 0.01em;
 }
 
 @media (max-width: 900px) {
