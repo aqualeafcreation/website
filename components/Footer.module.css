@@ -245,9 +245,10 @@
 /* Nav links */
 .links {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.55rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .links a {
@@ -277,16 +278,30 @@
   color: rgba(255,255,255,0.6);
 }
 
-/* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .formSection { padding: 4rem 5vw 3rem; }
   .formRow { grid-template-columns: 1fr; }
+  
+  .formContactInfo {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  
   .bottom {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: 2rem;
   }
-  .links { flex-direction: row; flex-wrap: wrap; justify-content: center; }
-  .contact { text-align: center; }
+  
+  .links { 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 1rem;
+  }
+  
   .submitBtn { width: 100%; }
 }

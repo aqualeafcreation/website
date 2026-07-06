@@ -1,15 +1,19 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
+  const pathname = usePathname()
+  const isGallery = pathname === '/gallery'
+
   const toggleMobileMenu = () => {
     document.getElementById('mobile-menu').classList.toggle('open')
   }
 
   return (
     <>
-      <nav className={styles.nav} id="navbar">
+      <nav className={`${styles.nav} ${isGallery ? styles.solidNav : ''}`} id="navbar">
         <div className={styles.logo}>
           <a href="/">AquaLeaf Creation</a>
         </div>
@@ -28,7 +32,6 @@ export default function Navbar() {
           CLOSE
         </button>
         <a href="/" onClick={toggleMobileMenu}>Home</a>
-        <a href="/#philosophy" onClick={toggleMobileMenu}>Philosophy</a>
         <a href="/#exhibitions" onClick={toggleMobileMenu}>Aquarium Types</a>
         <a href="/gallery" onClick={toggleMobileMenu}>Gallery</a>
         <a href="/#contact" onClick={toggleMobileMenu}>Contact</a>
