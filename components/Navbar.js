@@ -15,7 +15,10 @@ export default function Navbar() {
     <>
       <nav className={`${styles.nav} ${isGallery ? styles.solidNav : ''}`} id="navbar">
         <div className={styles.logo}>
-          <a href="/">AquaLeaf Creation</a>
+          <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}>
+            <img src="/logo.svg" alt="AquaLeaf Logo" style={{ height: '38px', width: 'auto' }} />
+            <span>AquaLeaf Creation</span>
+          </a>
         </div>
 
         <button className={styles.mobileTrigger} onClick={toggleMobileMenu} aria-label="Open menu">

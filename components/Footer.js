@@ -136,8 +136,13 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <div className={styles.bottomLeft}>
-            <p className={styles.brandName}>AquaLeaf Creation</p>
-            <p className={styles.tagline}>Living Architecture · Est. 2024</p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '0.5rem', justifyContent: 'center' }}>
+              <img src="/logo.svg" alt="AquaLeaf Logo" style={{ height: '50px', width: 'auto' }} />
+              <div style={{ textAlign: 'left' }}>
+                <p className={styles.brandName} style={{ marginBottom: '0.2rem' }}>AquaLeaf Creation</p>
+                <p className={styles.tagline}>Living Architecture · Est. 2024</p>
+              </div>
+            </div>
           </div>
 
           <div className={styles.links}>

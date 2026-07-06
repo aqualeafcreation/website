@@ -28,7 +28,10 @@ export default function Hero() {
       <div className={styles.overlay} />
 
       <div className={styles.content}>
-        <h1 className={styles.title}>
+        <div className="reveal" style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.2rem' }}>
+          <img src="/logo.svg" alt="AquaLeaf Logo" style={{ height: '85px', width: 'auto', filter: 'drop-shadow(0 0 15px rgba(0,0,0,0.8))' }} />
+        </div>
+        <h1 className={`${styles.title} reveal`}>
           AquaLeaf Creation
         </h1>
         <p className={styles.sub}>

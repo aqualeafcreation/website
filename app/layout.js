@@ -52,6 +52,9 @@ export const metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  icons: {
+    icon: '/logo.svg',
+  },
 }
 
 export default function RootLayout({ children }) {
