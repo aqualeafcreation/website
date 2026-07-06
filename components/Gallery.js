@@ -6,11 +6,11 @@ import Link from 'next/link'
 import styles from './Gallery.module.css'
 
 const images = [
-  'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80',
-  'https://images.unsplash.com/photo-1543822765-6b45a4a5840d?w=800&q=80',
-  'https://images.unsplash.com/photo-1524704796725-9fc3044a58b2?w=800&q=80',
-  'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&q=80',
-  'https://images.unsplash.com/photo-1620601332737-1425e408ec21?w=800&q=80'
+  '/gallery/1.webp',
+  '/gallery/2.webp',
+  '/gallery/3.webp',
+  '/gallery/4.webp',
+  '/gallery/5.webp'
 ]
 
 export default function Gallery() {

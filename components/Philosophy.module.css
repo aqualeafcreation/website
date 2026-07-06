@@ -16,6 +16,14 @@
   justify-content: center;
 }
 
+.videoBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 /* Gradient fade to integrate the image with the black background seamlessly */
 .imageOverlay {
   position: absolute;

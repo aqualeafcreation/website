@@ -102,3 +102,29 @@
   border-color: #d4a820;
   color: #fce878;
 }
+
+@media (max-width: 768px) {
+  .item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    border: 1px solid transparent;
+    background: 
+      linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.9) 50%, transparent 60%),
+      linear-gradient(rgba(212, 163, 64, 0.4), rgba(212, 163, 64, 0.4));
+    background-origin: border-box;
+    background-clip: border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    background-size: 250% 250%, 100% 100%;
+    animation: borderShine 8s linear infinite;
+  }
+}
+
+@keyframes borderShine {
+  0% { background-position: 200% 200%; }
+  100% { background-position: -100% -100%; }
+}
