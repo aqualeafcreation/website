@@ -15,7 +15,7 @@ export default function TermsOfService() {
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '3rem', marginBottom: '2rem', letterSpacing: '0.05em' }}>Terms of Service</h1>
           <p style={{ marginBottom: '1.5rem', color: 'rgba(255,255,255,0.7)' }}>Last updated: July 2026</p>
           <p style={{ marginBottom: '1.5rem' }}>Welcome to AquaLeaf Creation!</p>
-          <p style={{ marginBottom: '1.5rem' }}>These terms and conditions outline the rules and regulations for the use of AquaLeaf Creation's Website, located at aqualeafcreation.in.</p>
+          <p style={{ marginBottom: '1.5rem' }}>These terms and conditions outline the rules and regulations for the use of AquaLeaf Creation&apos;s Website, located at aqualeafcreation.in.</p>
           
           <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', marginTop: '3rem', marginBottom: '1.5rem', color: '#d4a340' }}>Commission Enquiries</h2>
           <p style={{ marginBottom: '1.5rem' }}>All designs, proposals, and conceptual artwork provided prior to formal agreement remain the intellectual property of AquaLeaf Creation. Project commencement is subject to a formal contract and deposit.</p>

@@ -18,8 +18,17 @@ export default function Gallery() {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    // Calculate the total width of the inner carousel minus the outer container
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    const updateWidth = () => {
+      if (carousel.current) {
+        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+      }
+    };
+    
+    updateWidth();
+    setTimeout(updateWidth, 500);
+    
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
   }, []);
 
   return (

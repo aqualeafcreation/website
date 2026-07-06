@@ -35,6 +35,7 @@
   cursor: grab;
   overflow: hidden;
   padding: 0 5vw;
+  touch-action: pan-y;
 }
 
 .innerCarousel {
