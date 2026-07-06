@@ -102,9 +102,9 @@
 .scrollDot {
   width: 1px;
   height: 80px;
-  background: linear-gradient(to bottom, transparent, var(--highlight-neon));
-  box-shadow: 0 0 15px var(--highlight-glow);
-  animation: scrollLine 2s ease-in-out infinite;
+  background: linear-gradient(to bottom, transparent, #d4a340);
+  box-shadow: 0 0 10px rgba(212, 163, 64, 0.4);
+  animation: scrollLine 2.5s ease-in-out infinite;
   transform-origin: top;
 }
 

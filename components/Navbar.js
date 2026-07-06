@@ -11,7 +11,7 @@ export default function Navbar() {
     <>
       <nav className={styles.nav} id="navbar">
         <div className={styles.logo}>
-          <a href="#">AquaLeaf Creation</a>
+          <a href="/">AquaLeaf Creation</a>
         </div>
 
         <button className={styles.mobileTrigger} onClick={toggleMobileMenu} aria-label="Open menu">
@@ -27,10 +27,11 @@ export default function Navbar() {
         <button className="mobileClose" onClick={toggleMobileMenu} aria-label="Close menu">
           CLOSE
         </button>
-        <a href="#hero" onClick={toggleMobileMenu}>Home</a>
-        <a href="#philosophy" onClick={toggleMobileMenu}>Philosophy</a>
-        <a href="#exhibitions" onClick={toggleMobileMenu}>Exhibitions</a>
-        <a href="#booking" onClick={toggleMobileMenu}>Contact</a>
+        <a href="/" onClick={toggleMobileMenu}>Home</a>
+        <a href="/#philosophy" onClick={toggleMobileMenu}>Philosophy</a>
+        <a href="/#exhibitions" onClick={toggleMobileMenu}>Exhibitions</a>
+        <a href="/gallery" onClick={toggleMobileMenu}>Gallery</a>
+        <a href="/#contact" onClick={toggleMobileMenu}>Contact</a>
       </div>
     </>
   )

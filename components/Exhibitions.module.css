@@ -103,7 +103,7 @@
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.7));
 
   /* Sweep animation for shimmering golden shine */
-  animation: sunSweep 6s ease-in-out infinite;
+  animation: sunSweep 10s ease-in-out infinite;
 }
 
 @keyframes sunSweep {

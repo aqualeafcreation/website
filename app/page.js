@@ -3,6 +3,7 @@ import Hero from '@/components/Hero'
 import Philosophy from '@/components/Philosophy'
 import Exhibitions from '@/components/Exhibitions'
 import QuoteStrip from '@/components/QuoteStrip'
+import Gallery from '@/components/Gallery'
 import Footer from '@/components/Footer'
 import ClientEffects from '@/components/ClientEffects'
 
@@ -18,6 +19,7 @@ export default function Home() {
 
         <Exhibitions />
         <QuoteStrip />
+        <Gallery />
       </main>
       <Footer />
     </>
