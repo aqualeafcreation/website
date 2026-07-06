@@ -5,12 +5,10 @@ import Exhibitions from '@/components/Exhibitions'
 import QuoteStrip from '@/components/QuoteStrip'
 import Gallery from '@/components/Gallery'
 import Footer from '@/components/Footer'
-import ClientEffects from '@/components/ClientEffects'
 
 export default function Home() {
   return (
     <>
-      <ClientEffects />
       <Navbar />
       <main>
         <Hero />

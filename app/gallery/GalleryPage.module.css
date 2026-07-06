@@ -131,3 +131,30 @@
   color: #d4a820;
   transform: translateY(-2px);
 }
+
+@media (max-width: 768px) {
+  .overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .gridItem::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, transparent 35%, rgba(255, 235, 160, 0.9) 50%, transparent 65%) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    background-size: 300% 300%;
+    animation: borderShine 4s linear infinite;
+  }
+}
+
+@keyframes borderShine {
+  0% { background-position: 200% 200%; }
+  100% { background-position: -100% -100%; }
+}

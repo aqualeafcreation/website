@@ -1,5 +1,6 @@
 import { Marcellus, Montserrat, Bodoni_Moda, Playfair_Display } from 'next/font/google'
 import './globals.css'
+import ClientEffects from '@/components/ClientEffects'
 
 /* Premium Display (for the 3D titles and logos) */
 const marcellus = Marcellus({
@@ -59,7 +60,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${marcellus.variable} ${montserrat.variable} ${bodoni.variable} ${playfair.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <ClientEffects />
+        {children}
+      </body>
     </html>
   )
 }
