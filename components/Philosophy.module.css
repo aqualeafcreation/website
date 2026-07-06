@@ -29,8 +29,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, #000000 0%, transparent 22%, rgba(0,0,0,0.5) 78%, #000000 100%),
-    radial-gradient(ellipse 80% 70% at 50% 50%, transparent 30%, rgba(0,0,0,0.55) 80%, rgba(0,0,0,0.9) 100%);
+    linear-gradient(to bottom, #000000 0%, rgba(0,0,0,0.85) 15%, transparent 35%, rgba(0,0,0,0.5) 78%, #000000 100%),
+    radial-gradient(ellipse 80% 70% at 50% 50%, transparent 30%, rgba(0,0,0,0.55) 80%, rgba(0,0,0,0.95) 100%);
   z-index: 1;
 }
 
@@ -39,6 +39,7 @@
   z-index: 2;
   text-align: center;
   padding: 0 5vw;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.9);
 }
 
 .heading {

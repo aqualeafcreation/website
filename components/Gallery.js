@@ -15,21 +15,7 @@ const images = [
 
 export default function Gallery() {
   const carousel = useRef();
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const updateWidth = () => {
-      if (carousel.current) {
-        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-      }
-    };
-    
-    updateWidth();
-    setTimeout(updateWidth, 500);
-    
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
-  }, []);
+  // Framer Motion automatically handles constraints if a ref is passed
 
   return (
     <section className={styles.gallerySection}>
@@ -41,7 +27,7 @@ export default function Gallery() {
         <motion.div ref={carousel} className={styles.carousel} whileTap={{ cursor: "grabbing" }}>
           <motion.div 
             drag="x" 
-            dragConstraints={{ right: 0, left: -width }} 
+            dragConstraints={carousel} 
             className={styles.innerCarousel}
           >
             {images.map((src, idx) => (
