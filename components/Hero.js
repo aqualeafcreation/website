@@ -4,8 +4,7 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import styles from './Hero.module.css'
 
-// Dark, high-contrast aquarium image
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=1920&q=90&fit=crop'
+const HERO_IMAGE = ''
 
 export default function Hero() {
   const bgRef = useRef(null)
@@ -23,27 +22,17 @@ export default function Hero() {
 
   return (
     <section className={styles.hero} id="hero">
-      {/* Background Image */}
-      <div className={styles.bgWrap} ref={bgRef}>
-        <Image
-          src={HERO_IMAGE}
-          alt="Dark minimalist aquarium"
-          fill
-          priority
-          sizes="100vw"
-          style={{ objectFit: 'cover', objectPosition: 'center', filter: 'grayscale(0.3) contrast(1.2)' }}
-        />
-      </div>
+      {/* Luxury Ambient Dark Glow Background */}
+      <div className={styles.ambientGlow}></div>
 
       <div className={styles.overlay} />
 
       <div className={styles.content}>
-        <p className={styles.eyebrow}>AquaLeaf Creation</p>
         <h1 className={styles.title}>
-          Living <span className={styles.highlight}>Architecture</span>
+          AquaLeaf Creation
         </h1>
         <p className={styles.sub}>
-          Bespoke aquascapes and terrariums -<br/>nature sculpted as the ultimate luxury.
+          Living Architecture. Bespoke aquascapes and terrariums.
         </p>
       </div>
 

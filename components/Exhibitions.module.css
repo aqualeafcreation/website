@@ -85,31 +85,38 @@
 
 .titleLine {
   display: block;
-  /* Brushed gold gradient — bright center, dark rich amber edges */
-  background: linear-gradient(
-    135deg,
-    #ffebb0 0%,
-    #d4a340 25%,
-    #b07d20 50%,
-    #fced9a 75%,
-    #a16d10 100%
-  );
-  background-size: 300% 100%;
+  background: 
+    linear-gradient(
+      -60deg, 
+      transparent 35%, 
+      rgba(255, 255, 255, 0.9) 45%, 
+      rgba(255, 235, 160, 0.8) 50%, 
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom, 
+      #d4a340 0%, 
+      #fce18d 25%, 
+      #8a6112 50%, 
+      #f9df8a 75%, 
+      #a67713 100%
+    );
+  background-size: 300% 100%, 100% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  -webkit-text-fill-color: transparent;
 
-  /* Subtle flat shadow instead of 3D extrusion */
-  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.7));
+  /* Deep flat shadow to separate from background */
+  filter: drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.9));
 
-  /* Sweep animation for shimmering golden shine */
-  animation: sunSweep 10s ease-in-out infinite;
+  /* Sharp sweeping highlight animation */
+  animation: trueShine 8s linear infinite;
 }
 
-@keyframes sunSweep {
-  0%   { background-position: 0%   50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0%   50%; }
+@keyframes trueShine {
+  0%   { background-position: 200% 0, 0 0; }
+  100% { background-position: -100% 0, 0 0; }
 }
 
 /* ── Category label ─────────────────────────────────────────── */

@@ -53,7 +53,7 @@ export default function Footer() {
 
       <footer className={styles.footer} id="contact">
         <div className={styles.formSection}>
-          <p className={styles.formLabel}>Commission Enquiry</p>
+          <p className={styles.formLabel}>Enquiry</p>
           <h3 className={styles.formHeading}>Begin Your Project</h3>
 
           <form className={styles.form} onSubmit={handleFormSubmit} noValidate>

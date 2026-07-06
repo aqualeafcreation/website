@@ -6,35 +6,17 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: var(--bg-color);
+  background: #000;
 }
 
-.bgWrap {
+.ambientGlow {
   position: absolute;
   inset: 0;
-  transform: scale(1.05);
-  will-change: transform;
-  overflow: hidden;
-  z-index: 0;
-}
-
-/* Gradient fade to pure black at the bottom to merge with page */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to bottom,
-      rgba(0,0,0,0.4)  0%,
-      rgba(0,0,0,0.1) 35%,
-      rgba(0,0,0,0.5) 70%,
-      #000000         100%
-    ),
-    radial-gradient(
-      ellipse 80% 70% at 50% 50%,
-      transparent 30%,
-      rgba(0,0,0,0.5) 80%,
-      rgba(0,0,0,0.85) 100%
-    );
+  background: radial-gradient(
+    circle at 50% 40%, 
+    rgba(212, 163, 64, 0.15) 0%, 
+    rgba(0, 0, 0, 1) 60%
+  );
   z-index: 1;
 }
 
@@ -46,45 +28,56 @@
   padding: 0 5vw;
 }
 
-.eyebrow {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 300;
-  letter-spacing: 0.6em;
-  color: #fff;
-  opacity: 0.8;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  animation: fadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s backwards;
-}
-
 .title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 400;
   line-height: 1.1;
-  color: #ffffff;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.5rem;
   letter-spacing: 0.05em;
-  animation: fadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.4s backwards;
+  
+  /* Hyper-realistic metallic gold with sweeping white highlight */
+  background: 
+    linear-gradient(
+      -60deg, 
+      transparent 35%, 
+      rgba(255, 255, 255, 0.9) 45%, /* Blinding white specular highlight */
+      rgba(255, 235, 160, 0.8) 50%, 
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom, 
+      #d4a340 0%, 
+      #fce18d 25%, 
+      #8a6112 50%, /* Dark indent to look deeply 3D */
+      #f9df8a 75%, 
+      #a67713 100%
+    );
+  background-size: 300% 100%, 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 15px rgba(0,0,0,1));
+  
+  animation: trueShine 8s linear infinite, fadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s backwards;
 }
 
-.highlight {
-  color: #d4a340; /* Refined luxury gold */
-  font-style: italic;
-  font-family: var(--font-cursive);
+@keyframes trueShine {
+  0%   { background-position: 200% 0, 0 0; }
+  100% { background-position: -100% 0, 0 0; }
 }
 
 .sub {
   font-family: var(--font-sans);
-  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
-  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.8);
   max-width: 500px;
   margin: 0 auto;
   line-height: 1.8;
   font-weight: 300;
-  letter-spacing: 0.04em;
-  animation: fadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.6s backwards;
+  letter-spacing: 0.08em;
+  animation: fadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.4s backwards;
 }
 
 /* Minimalist vertical line indicator */
