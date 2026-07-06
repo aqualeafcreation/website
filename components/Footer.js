@@ -12,7 +12,7 @@ export default function Footer() {
           <a href="#hero">HOME</a>
           <a href="#exhibitions">EXHIBITIONS</a>
           <a href="#booking">COMMISSION</a>
-          <a href="https://instagram.com/aqualeafcreation" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+          <a href="https://instagram.com/aqualeafcreation" target="_blank" rel="noopener noreferrer">@aqualeafcreation</a>
         </div>
       </div>
 

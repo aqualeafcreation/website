@@ -31,22 +31,28 @@
 }
 
 .step:hover {
-  border-top-color: var(--neon-green);
+  border-top-color: var(--highlight-neon);
 }
 
 .stepNum {
   display: block;
-  font-family: var(--font-mono);
+  font-family: var(--font-serif);
   font-size: 3.5rem;
-  font-weight: 700;
+  font-style: italic;
+  font-weight: 400;
   color: var(--text-ghost);
   margin-bottom: 2rem;
   transition: color var(--ease-med), text-shadow var(--ease-med);
 }
 
 .step:hover .stepNum {
-  color: var(--neon-green);
-  text-shadow: 0 0 15px var(--neon-green-dim);
+  background: linear-gradient(-70deg, #B38728 0%, #FBF5B7 40%, #FFFFFF 50%, #FBF5B7 60%, #B38728 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 3s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
 }
 
 .stepTitle {
@@ -61,7 +67,7 @@
   font-size: 1rem;
   line-height: 1.6;
   color: var(--text-secondary);
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
 }
 
 @media (max-width: 900px) {

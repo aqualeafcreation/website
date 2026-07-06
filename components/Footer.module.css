@@ -12,11 +12,11 @@
 }
 
 .brandName {
-  font-family: var(--font-sans);
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 400;
   color: var(--text-primary);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.02em;
   margin-bottom: 0.5rem;
 }
 
@@ -24,6 +24,7 @@
   font-family: var(--font-sans);
   font-size: 0.8rem;
   color: var(--highlight-neon);
+  text-shadow: 0 0 10px var(--highlight-dim);
   letter-spacing: 0.1em;
 }
 
@@ -44,6 +45,7 @@
 
 .links a:hover {
   color: var(--highlight-neon);
+  text-shadow: 0 0 10px var(--highlight-glow);
 }
 
 .bottom {
@@ -73,7 +75,7 @@
   height: 6px;
   background: var(--highlight-neon);
   border-radius: 50%;
-  box-shadow: 0 0 8px var(--highlight-neon);
+  box-shadow: 0 0 10px var(--highlight-glow);
 }
 
 @media (max-width: 768px) {

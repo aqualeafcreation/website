@@ -1,17 +1,25 @@
-import { Outfit, JetBrains_Mono } from 'next/font/google'
+import { Jost, Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
-const outfit = Outfit({
+const jost = Jost({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
+  weight: ['300', '400', '500'],
+  variable: '--font-heading',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['200', '300', '400'],
   variable: '--font-sans',
   display: 'swap',
 })
 
-const jetbrainsMono = JetBrains_Mono({
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-mono',
+  style: ['normal', 'italic'],
+  weight: ['400'],
+  variable: '--font-serif',
   display: 'swap',
 })
 
@@ -37,7 +45,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${jetbrainsMono.variable}`}
+      className={`${jost.variable} ${inter.variable} ${playfair.variable}`}
     >
       <body>{children}</body>
     </html>

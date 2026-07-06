@@ -10,11 +10,11 @@
 }
 
 .heading {
-  font-family: var(--font-sans);
-  font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  font-weight: 400;
   color: var(--text-primary);
+  letter-spacing: 0.02em;
   margin-bottom: 3rem;
 }
 
@@ -38,7 +38,7 @@
 }
 .socialLink:hover {
   color: #ffffff;
-  text-shadow: 0 0 15px var(--highlight-neon);
+  text-shadow: 0 0 15px var(--highlight-glow);
 }
 
 @media (max-width: 900px) {

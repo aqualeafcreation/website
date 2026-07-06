@@ -6,15 +6,15 @@ export default function Booking() {
       <div className={styles.info}>
         <p className={`section-label reveal`}>03 — Contact</p>
         <h2 className={`${styles.heading} reveal reveal-d1`}>
-          Initiate project.
+          Your Vision,<br />Realized.
         </h2>
         
         <div className={`${styles.contactBlock} reveal reveal-d2`}>
-          <p>hello@aqualeafcreation.in</p>
-          <p>+91 99999 99999</p>
+          <p>info@aqualeafcreation.in</p>
+          <p>+91 7028380231</p>
           <p>Chhatrapati Sambhajinagar, MH</p>
           <a href="https://instagram.com/aqualeafcreation" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-            {'INSTAGRAM'}
+            {'@aqualeafcreation'}
           </a>
         </div>
       </div>

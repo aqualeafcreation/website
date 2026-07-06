@@ -4,7 +4,7 @@ import styles from './Exhibitions.module.css'
 const items = [
   {
     id:       'dutch',
-    title:    'BOTANICAL CANVAS',
+    title:    'Botanical Canvas',
     num:      '01',
     quote:    'A planted ecosystem is a captive mountain, bringing untamed peace indoors.',
     img:      'https://images.unsplash.com/photo-1611462985358-60d3498e0364?w=1920&q=85&fit=crop',
@@ -12,7 +12,7 @@ const items = [
   },
   {
     id:       'hardscape',
-    title:    'STRUCTURAL CORE',
+    title:    'Structural Core',
     num:      '02',
     quote:    'Elevating luxury spaces with raw, living nature.',
     img:      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&q=85&fit=crop',
@@ -20,7 +20,7 @@ const items = [
   },
   {
     id:       'terrarium',
-    title:    'CONTAINED SYSTEM',
+    title:    'Contained System',
     num:      '03',
     quote:    'True luxury is owning a living, breathing jungle.',
     img:      'https://images.unsplash.com/photo-1552083375-1447ce886485?w=1920&q=85&fit=crop',
@@ -28,7 +28,7 @@ const items = [
   },
   {
     id:       'paludarium',
-    title:    'TRANSITION ZONE',
+    title:    'Transition Zone',
     num:      '04',
     quote:    'Living art, engineered for modern environments.',
     img:      'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=1920&q=85&fit=crop',

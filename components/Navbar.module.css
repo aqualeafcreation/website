@@ -13,16 +13,22 @@
 
 /* Logo */
 .logo a {
-  font-family: var(--font-sans);
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 400;
   color: var(--text-primary);
   text-decoration: none;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.02em;
   transition: color var(--ease-med);
 }
 .logo a:hover {
-  color: var(--highlight-neon);
+  background: linear-gradient(-70deg, #B38728 0%, #FBF5B7 40%, #FFFFFF 50%, #FBF5B7 60%, #B38728 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 3s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
 }
 
 /* Global menu trigger */
@@ -41,4 +47,5 @@
 }
 .mobileTrigger:hover {
   color: var(--highlight-neon);
+  text-shadow: 0 0 10px var(--highlight-glow);
 }
