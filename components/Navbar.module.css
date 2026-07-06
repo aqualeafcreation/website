@@ -46,3 +46,13 @@
   color: var(--highlight-neon);
   text-shadow: 0 0 8px var(--highlight-glow);
 }
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 1rem 5vw;
+  }
+  
+  .logo a {
+    font-size: 1.1rem;
+  }
+}

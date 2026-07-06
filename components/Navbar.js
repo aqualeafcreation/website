@@ -29,7 +29,7 @@ export default function Navbar() {
         </button>
         <a href="/" onClick={toggleMobileMenu}>Home</a>
         <a href="/#philosophy" onClick={toggleMobileMenu}>Philosophy</a>
-        <a href="/#exhibitions" onClick={toggleMobileMenu}>Exhibitions</a>
+        <a href="/#exhibitions" onClick={toggleMobileMenu}>Aquarium Types</a>
         <a href="/gallery" onClick={toggleMobileMenu}>Gallery</a>
         <a href="/#contact" onClick={toggleMobileMenu}>Contact</a>
       </div>
