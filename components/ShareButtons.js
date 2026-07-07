@@ -9,13 +9,17 @@ export default function ShareButtons({ item }) {
     return `${window.location.origin}/gallery/${item.slug}`
   }
 
-  const handleCopy = () => {
+  const handleCopy = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
     navigator.clipboard.writeText(getUrl())
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
 
-  const handleWhatsapp = () => {
+  const handleWhatsapp = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
     const text = `Check out this amazing aquascape: ${item.title} - ${getUrl()}`
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank')
   }

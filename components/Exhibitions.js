@@ -33,7 +33,7 @@ const items = [
     category:  'Terrarium',
     quote:     'Elevating luxury spaces with raw, living nature.',
     subline:   'Glass Gardens · Moss & Fern',
-    img:       '/images/terrarium.webp',
+    img:       '/images/IMG_20260707_143306.jpg.webp',
     alt:       'Geometric glass terrarium',
   },
 ]
