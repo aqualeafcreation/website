@@ -60,15 +60,11 @@ export default function Exhibitions() {
             <div className={styles.panelVignetteTop} />
 
             <div className={styles.panelContent}>
-              <span className={`${styles.panelNum} reveal`}>{item.num}</span>
+              <div className={`${styles.rule} reveal`} />
 
-              <div className={`${styles.rule} reveal reveal-d1`} />
-
-              <h2 className={`${styles.panelTitle} reveal reveal-d2`}>
-                <span className={styles.titleLine}>{item.title}</span>
+              <h2 className={`${styles.panelTitle} reveal reveal-d1`}>
+                <span className={styles.titleLine}>{item.category}</span>
               </h2>
-
-              <p className={`${styles.panelCategory} reveal reveal-d3`}>{item.category}</p>
 
               <blockquote className={`${styles.panelQuote} reveal reveal-d3`}>
                 &ldquo;{item.quote}&rdquo;
@@ -95,9 +91,8 @@ export default function Exhibitions() {
             <div className={styles.imgFadeBottom} />
 
             <div className={styles.imgLabelWrap}>
-              <p className={`${styles.imgNum} reveal`}>{item.num}</p>
-              <h3 className={`${styles.imgLabel} reveal reveal-d1`}>{item.imgLabel}</h3>
-              <div className={`${styles.imgLabelRule} reveal reveal-d2`} />
+              <h3 className={`${styles.imgLabel} reveal`}>{item.imgLabel}</h3>
+              <div className={`${styles.imgLabelRule} reveal reveal-d1`} />
             </div>
           </div>
 
