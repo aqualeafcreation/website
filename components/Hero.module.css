@@ -25,12 +25,9 @@
 .videoVignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle at center,
-    transparent 20%,
-    rgba(0, 0, 0, 0.5) 60%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: 
+    radial-gradient(circle at center, transparent 10%, rgba(0, 0, 0, 0.7) 70%, #000 100%),
+    linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.8) 75%, #000 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -69,4 +66,8 @@
 }
 
 @media (max-width: 768px) {
+  .videoBg {
+    object-fit: contain;
+    width: 100%;
+  }
 }

@@ -13,6 +13,14 @@ export default function Home() {
       <main>
         <Hero />
 
+        <QuoteStrip 
+          title="AquaLeaf Creation"
+          text="&ldquo;Living Architecture. Bespoke aquascapes and terrariums.&rdquo;" 
+          subQuote={true}
+          showScroll={true}
+          noTopPadding={true}
+        />
+
         <Philosophy />
         <QuoteStrip text="&ldquo;Creating nature is the ultimate luxury.&rdquo;" />
 

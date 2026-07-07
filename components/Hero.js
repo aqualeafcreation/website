@@ -35,9 +35,6 @@ export default function Hero() {
       {/* Vignette Overlay for smooth blending */}
       <div className={styles.videoVignette} />
 
-      <div className={styles.scrollIndicator}>
-        <div className={styles.scrollDot} />
-      </div>
     </section>
   )
 }
