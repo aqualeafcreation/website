@@ -28,13 +28,7 @@
   transition: color var(--ease-med);
 }
 .logo a:hover {
-  background: linear-gradient(160deg, #5a3d00 0%, #c49a20 30%, #e8c060 50%, #c49a20 70%, #5a3d00 100%);
-  background-size: 280% auto;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: shine 4s linear infinite;
-  filter: drop-shadow(0 0 6px rgba(180, 130, 20, 0.3));
+  color: var(--highlight-neon);
 }
 
 /* Global menu trigger */
