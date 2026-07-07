@@ -13,6 +13,11 @@
 }
 
 .title {
+  display: none; /* Hide brand name globally as video has it built-in */
+}
+
+/* Kept for reference but not displayed */
+.titleHidden {
   font-family: var(--font-display);
   font-size: clamp(3rem, 8vw, 5rem);
   font-weight: 400;
@@ -102,11 +107,7 @@
   }
   
   .quoteStrip.noTopPadding {
-    padding-top: 3rem;
-  }
-  
-  .title {
-    display: none; /* Hide brand name on mobile */
+    padding-top: 1rem;
   }
 }
 
