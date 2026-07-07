@@ -102,7 +102,7 @@
   }
   
   .quoteStrip.noTopPadding {
-    padding-top: 0;
+    padding-top: 3rem;
   }
   
   .title {

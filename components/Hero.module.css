@@ -67,20 +67,20 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: 60vh;
-    height: 60svh;
-    min-height: 400px;
+    height: 75vh;
+    height: 75svh;
+    min-height: 450px;
   }
   
   .videoBg {
     object-fit: cover;
     width: 140%; 
-    top: 65%; /* Increased top position to clear navbar completely */
+    top: 60%; /* Shifted down, but within the taller container so bottom isn't clipped */
   }
 
   .videoVignette {
     background: 
-      linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.8) 15%, transparent 30%, transparent 95%, #000 100%),
-      radial-gradient(circle at center, transparent 10%, rgba(0, 0, 0, 0.3) 90%, #000 100%);
+      linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.8) 12%, transparent 25%, transparent 98%, #000 100%),
+      radial-gradient(circle at center, transparent 10%, rgba(0, 0, 0, 0.1) 90%, transparent 100%);
   }
 }
