@@ -16,7 +16,7 @@ const items = [
     id:        'hardscape',
     category:  'Hardscape',
     quote:     'A planted ecosystem is a captive mountain, bringing untamed peace indoors.',
-    subline:   'Stone · Driftwood · Negative Space',
+    subline:   'Stone · Driftwood . Plants',
     img:       '/images/hardscape.webp',
     alt:       'Dramatic hardscape aquarium',
   },
@@ -33,7 +33,7 @@ const items = [
     category:  'Terrarium',
     quote:     'Elevating luxury spaces with raw, living nature.',
     subline:   'Glass Gardens · Moss & Fern',
-    img:       '/images/IMG_20260707_143306.jpg.webp',
+    img:       '/images/terrarium.webp',
     alt:       'Geometric glass terrarium',
   },
 ]
