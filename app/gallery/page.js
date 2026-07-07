@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './GalleryPage.module.css'
 import { galleryData } from '@/lib/galleryData'
 import ShareButtons from '@/components/ShareButtons'
@@ -22,7 +23,7 @@ export default function GalleryPage() {
         
         <div className={styles.grid}>
           {galleryData.map((item, idx) => (
-            <div key={idx} className={styles.gridItem}>
+            <Link href={`/gallery/${item.slug}`} key={idx} className={styles.gridItem}>
               <Image 
                 src={item.img} 
                 alt={item.title} 
@@ -39,7 +40,7 @@ export default function GalleryPage() {
                 </div>
                 <ShareButtons item={item} />
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </main>
