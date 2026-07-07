@@ -74,7 +74,8 @@
   
   .videoBg {
     object-fit: cover;
-    width: 140%; /* Increase width to crop ~20% from left and right */
+    width: 140%; 
+    top: 58%; /* Shift down so it doesn't hide behind the navbar */
   }
 
   .videoVignette {

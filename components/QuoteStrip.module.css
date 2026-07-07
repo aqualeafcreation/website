@@ -106,7 +106,7 @@
   }
   
   .title {
-    margin-top: -1rem; /* Pull title slightly up on mobile to bridge gap perfectly */
+    display: none; /* Hide brand name on mobile */
   }
 }
 
