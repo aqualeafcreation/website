@@ -100,6 +100,14 @@
   .quoteStrip {
     padding: 4rem 5vw;
   }
+  
+  .quoteStrip.noTopPadding {
+    padding-top: 0;
+  }
+  
+  .title {
+    margin-top: -1rem; /* Pull title slightly up on mobile to bridge gap perfectly */
+  }
 }
 
 .scrollIndicator {

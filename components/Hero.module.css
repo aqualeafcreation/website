@@ -66,8 +66,20 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    height: 60svh;
+    min-height: 400px;
+  }
+  
   .videoBg {
-    object-fit: contain;
-    width: 100%;
+    object-fit: cover;
+    width: 140%; /* Increase width to crop ~20% from left and right */
+  }
+
+  .videoVignette {
+    background: 
+      linear-gradient(to bottom, #000 0%, transparent 20%, transparent 80%, #000 100%),
+      radial-gradient(circle at center, transparent 10%, rgba(0, 0, 0, 0.6) 80%, #000 100%);
   }
 }
