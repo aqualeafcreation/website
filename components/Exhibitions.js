@@ -9,7 +9,7 @@ const items = [
     category:  'Dutch Style',
     quote:     'Aquascaping is not decoration it is the recreation of the nature.',
     subline:   'Planted Aquascape · Lush Canopy Systems',
-    img:       '/images/dutch-style.jpg',
+    img:       '/images/dutch-style.jpeg',
     alt:       'Lush Dutch-style planted aquarium',
   },
   {
@@ -17,7 +17,7 @@ const items = [
     category:  'Hardscape',
     quote:     'A planted ecosystem is a captive mountain, bringing untamed peace indoors.',
     subline:   'Stone · Driftwood . Plants',
-    img:       '/images/hardscape.jpg',
+    img:       '/images/hardscape.jpeg',
     alt:       'Dramatic hardscape aquarium',
   },
   {
@@ -25,7 +25,7 @@ const items = [
     category:  'Paludarium',
     quote:     'An Aquascaping is not just a tank, its a living canvas, painted with plants, stones, and water.',
     subline:   'Land & Water Fusion · Living Ecosystems',
-    img:       '/images/Paludarium.jpg',
+    img:       '/images/Paludarium.jpeg',
     alt:       'Paludarium ecosystem',
   },
   {
@@ -33,7 +33,7 @@ const items = [
     category:  'Terrarium',
     quote:     'Elevating luxury spaces with raw, living nature.',
     subline:   'Glass Gardens · Moss & Fern',
-    img:       '/images/terrarium.jpg',
+    img:       '/images/terrarium.jpeg',
     alt:       'Geometric glass terrarium',
   },
 ]
