@@ -6,47 +6,35 @@ import styles from './Exhibitions.module.css'
 const items = [
   {
     id:        'dutch',
-    num:       '01',
     category:  'Dutch Style',
-    title:     'Botanical Canvas',
-    quote:     'A planted ecosystem is a captive wilderness - untamed peace sculpted for your space.',
+    quote:     'Aquascaping is not decoration it is the recreation of the nature.',
     subline:   'Planted Aquascape · Lush Canopy Systems',
     img:       '/images/dutch-style.webp',
     alt:       'Lush Dutch-style planted aquarium',
-    imgLabel:  'Dutch Style',
   },
   {
     id:        'hardscape',
-    num:       '02',
     category:  'Hardscape',
-    title:     'Structural Core',
-    quote:     'Where raw stone and ancient driftwood converge - architecture that breathes.',
+    quote:     'A planted ecosystem is a captive mountain, bringing untamed peace indoors.',
     subline:   'Stone · Driftwood · Negative Space',
     img:       '/images/hardscape.webp',
     alt:       'Dramatic hardscape aquarium',
-    imgLabel:  'Hardscape',
-  },
-  {
-    id:        'terrarium',
-    num:       '03',
-    category:  'Terrarium',
-    title:     'Contained Jungle',
-    quote:     'True luxury is owning a living, breathing world sealed behind glass.',
-    subline:   'Glass Gardens · Moss & Fern',
-    img:       '/images/terrarium.webp',
-    alt:       'Geometric glass terrarium',
-    imgLabel:  'Terrarium',
   },
   {
     id:        'paludarium',
-    num:       '04',
     category:  'Paludarium',
-    title:     'Transition Zone',
-    quote:     'Land and water - two worlds in perpetual dialogue, engineered for eternity.',
+    quote:     'An Aquascaping is not just a tank, its a living canvas, painted with plants, stones, and water.',
     subline:   'Land & Water Fusion · Living Ecosystems',
     img:       '/images/Paludarium.webp',
     alt:       'Paludarium ecosystem',
-    imgLabel:  'Paludarium',
+  },
+  {
+    id:        'terrarium',
+    category:  'Terrarium',
+    quote:     'Elevating luxury spaces with raw, living nature.',
+    subline:   'Glass Gardens · Moss & Fern',
+    img:       '/images/terrarium.webp',
+    alt:       'Geometric glass terrarium',
   },
 ]
 
@@ -60,11 +48,11 @@ export default function Exhibitions() {
             <div className={styles.panelVignetteTop} />
 
             <div className={styles.panelContent}>
-              <div className={`${styles.rule} reveal`} />
-
-              <h2 className={`${styles.panelTitle} reveal reveal-d1`}>
+              <h2 className={`${styles.panelTitle} reveal`}>
                 <span className={styles.titleLine}>{item.category}</span>
               </h2>
+
+              <div className={`${styles.rule} reveal reveal-d1`} />
 
               <blockquote className={`${styles.panelQuote} reveal reveal-d3`}>
                 &ldquo;{item.quote}&rdquo;
@@ -90,10 +78,6 @@ export default function Exhibitions() {
             <div className={styles.imgFadeTop} />
             <div className={styles.imgFadeBottom} />
 
-            <div className={styles.imgLabelWrap}>
-              <h3 className={`${styles.imgLabel} reveal`}>{item.imgLabel}</h3>
-              <div className={`${styles.imgLabelRule} reveal reveal-d1`} />
-            </div>
           </div>
 
         </div>

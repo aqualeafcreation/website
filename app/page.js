@@ -14,9 +14,10 @@ export default function Home() {
         <Hero />
 
         <Philosophy />
+        <QuoteStrip text="&ldquo;Creating nature is the ultimate luxury.&rdquo;" />
 
         <Exhibitions />
-        <QuoteStrip />
+        <QuoteStrip text="&ldquo;True luxury is owning a living, breathing jungle.&rdquo;" />
         <Gallery />
       </main>
       <Footer />

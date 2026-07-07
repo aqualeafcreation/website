@@ -8,28 +8,46 @@
 }
 
 .quote {
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-size: clamp(1.3rem, 2.8vw, 2.2rem);
-  font-weight: 300;
-  line-height: 1.5;
-  color: rgba(245,240,230,0.6);
-  max-width: 720px;
-  margin-bottom: 2rem;
-  letter-spacing: 0.01em;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem); /* Slightly smaller than Exhibitions title */
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  max-width: 900px;
+  margin: 0 auto;
+  
+  background: 
+    linear-gradient(
+      -60deg, 
+      transparent 35%, 
+      rgba(255, 255, 255, 0.9) 45%, 
+      rgba(255, 235, 160, 0.8) 50%, 
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom, 
+      #d4a340 0%, 
+      #fce18d 25%, 
+      #8a6112 50%, 
+      #f9df8a 75%, 
+      #a67713 100%
+    );
+  background-size: 300% 100%, 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.9));
+  animation: trueShine 5.5s linear infinite;
 }
 
-.author {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: rgba(180, 130, 20, 0.45);
+@keyframes trueShine {
+  0%   { background-position: 200% 0, 0 0; }
+  100% { background-position: -100% 0, 0 0; }
 }
 
 @media (max-width: 768px) {
   .quoteStrip {
-    padding: 6rem 5vw;
+    padding: 4rem 5vw;
   }
 }
