@@ -22,23 +22,18 @@ export default function Hero() {
 
   return (
     <section className={styles.hero} id="hero">
-      <div className={`${styles.heroLogoWrap} reveal`}>
-        <img src="/logo.svg" alt="AquaLeaf Logo" className={styles.heroLogo} />
-      </div>
+      {/* Video Background */}
+      <video
+        src="/images/logo-animation.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className={styles.videoBg}
+      />
 
-      {/* Luxury Ambient Dark Glow Background */}
-      <div className={styles.ambientGlow}></div>
-
-      <div className={styles.overlay} />
-
-      <div className={styles.content}>
-        <h1 className={`${styles.title} reveal`}>
-          AquaLeaf Creation
-        </h1>
-        <p className={styles.sub}>
-          Living Architecture. Bespoke aquascapes and terrariums.
-        </p>
-      </div>
+      {/* Vignette Overlay for smooth blending */}
+      <div className={styles.videoVignette} />
 
       <div className={styles.scrollIndicator}>
         <div className={styles.scrollDot} />
