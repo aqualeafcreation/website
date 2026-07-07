@@ -15,6 +15,10 @@ export default function Philosophy() {
         <div className={styles.imageOverlay} />
         
         <div className={styles.content}>
+          <p className={`section-label reveal reveal-d2`}>PHILOSOPHY</p>
+          <h2 className={`${styles.heading} reveal reveal-d3`}>
+            Aquascaping is not decoration.<br />It is the recreation of the nature.
+          </h2>
         </div>
       </div>
     </section>
