@@ -112,55 +112,68 @@ export default function Footer() {
             </button>
           </form>
 
-          <div className={styles.formContactInfo}>
-            <a href="mailto:info@aqualeafcreation.in" className={styles.contactItem}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              <span>info@aqualeafcreation.in</span>
-            </a>
-            <a href="tel:+917028380231" className={styles.contactItem}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              <span>+91 70283 80231</span>
-            </a>
-            <a href="tel:+919673149546" className={styles.contactItem}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              <span>+91 96731 49546</span>
-            </a>
-            <a href="https://instagram.com/aqualeafcreation" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-              <span>Instagram</span>
-            </a>
-          </div>
+          {/* Moved contact info to the bottom section */}
         </div>
 
         <div className={styles.bottom}>
-          <div className={styles.bottomLeft}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '0.5rem', justifyContent: 'center' }}>
-              <img src="/logo.svg" alt="AquaLeaf Logo" style={{ height: '50px', width: 'auto' }} />
-              <div style={{ textAlign: 'left' }}>
-                <p className={styles.brandName} style={{ marginBottom: '0.2rem' }}>AquaLeaf Creation</p>
+          
+          {/* LEFT: Logo & Brand */}
+          <div className={styles.bottomCol}>
+            <div className={styles.logoGroup}>
+              <img src="/logo.svg" alt="AquaLeaf Logo" style={{ height: '40px', width: 'auto' }} />
+              <div>
+                <p className={styles.brandName}>AquaLeaf Creation</p>
                 <p className={styles.tagline}>Living Architecture · Est. 2024</p>
               </div>
             </div>
           </div>
 
-          <div className={styles.links}>
-            <a href="/">Home</a>
-            <a href="/#exhibitions">Aquarium Types</a>
-            <a href="/gallery">Gallery</a>
+          {/* MIDDLE: Contacts */}
+          <div className={styles.bottomCol}>
+            <p className={styles.colTitle}>Get in Touch</p>
+            <div className={styles.contactPhones}>
+              <a href="tel:+917028380231" className={styles.contactItem}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>+91 70283 80231</span>
+              </a>
+              <a href="tel:+919673149546" className={styles.contactItem}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>+91 96731 49546</span>
+              </a>
+              <a href="mailto:info@aqualeafcreation.in" className={styles.contactItem}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>info@aqualeafcreation.in</span>
+              </a>
+            </div>
+            
+            <div className={styles.contactIcons}>
+              <a href="https://instagram.com/aqualeafcreation" target="_blank" rel="noopener noreferrer" className={styles.iconItem} aria-label="Instagram" title="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="https://youtube.com/@aqualeafcreation" target="_blank" rel="noopener noreferrer" className={styles.iconItem} aria-label="YouTube" title="YouTube">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+            </div>
           </div>
 
-          <div className={styles.links}>
-            <a href="/privacy-policy">Privacy Policy</a>
-            <a href="/terms-of-service">Terms of Service</a>
+          {/* RIGHT: Navigation */}
+          <div className={styles.bottomCol}>
+            <p className={styles.colTitle}>Navigation</p>
+            <div className={styles.links}>
+              <a href="/">Home</a>
+              <a href="/#exhibitions">Aquarium Types</a>
+              <a href="/gallery">Gallery</a>
+              <a href="/privacy-policy">Privacy Policy</a>
+              <a href="/terms-of-service">Terms of Service</a>
+            </div>
           </div>
+
         </div>
 
         <div className={styles.copy}>
