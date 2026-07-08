@@ -10,7 +10,6 @@ const items = [
     quote:     'Aquascaping is not decoration it is the recreation of the nature.',
     subline:   'Planted Aquascape · Lush Canopy Systems',
     img:       '/images/dutch-style.jpeg',
-    mobileImg: '/mobile/dutch-style.svg',
     alt:       'Lush Dutch-style planted aquarium',
   },
   {
@@ -19,7 +18,6 @@ const items = [
     quote:     'A planted ecosystem is a captive mountain, bringing untamed peace indoors.',
     subline:   'Stone · Driftwood . Plants',
     img:       '/images/hardscape.jpeg',
-    mobileImg: '/mobile/hardscape.svg',
     alt:       'Dramatic hardscape aquarium',
   },
   {
@@ -28,7 +26,6 @@ const items = [
     quote:     'An Aquascaping is not just a tank, its a living canvas, painted with plants, stones, and water.',
     subline:   'Land & Water Fusion · Living Ecosystems',
     img:       '/images/Paludarium.jpeg',
-    mobileImg: '/mobile/Paludarium.svg',
     alt:       'Paludarium ecosystem',
   },
   {
@@ -37,7 +34,6 @@ const items = [
     quote:     'Elevating luxury spaces with raw, living nature.',
     subline:   'Glass Gardens · Moss & Fern',
     img:       '/images/terrarium.jpeg',
-    mobileImg: '/mobile/terrarium.svg',
     alt:       'Geometric glass terrarium',
   },
 ]
@@ -73,16 +69,8 @@ export default function Exhibitions() {
               src={item.img}
               alt={item.alt}
               fill
-              sizes="100vw"
-              className={`${styles.img} ${styles.desktopImg}`}
-              style={{ objectFit: 'cover', objectPosition: 'center' }}
-            />
-            <Image
-              src={item.mobileImg}
-              alt={item.alt}
-              fill
-              sizes="100vw"
-              className={`${styles.img} ${styles.mobileImg}`}
+              sizes="(max-width: 768px) 100vw, 100vw"
+              className={styles.img}
               style={{ objectFit: 'cover', objectPosition: 'center' }}
             />
 
