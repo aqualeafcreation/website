@@ -57,3 +57,9 @@
     height: 80vh;
   }
 }
+
+@media (max-width: 768px) {
+  .videoBg {
+    filter: brightness(1.1) contrast(1.05) saturate(1.05);
+  }
+}
