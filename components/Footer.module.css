@@ -299,19 +299,60 @@
 @media (max-width: 768px) {
   .formSection { padding: 3rem 5vw 2rem; }
   .bottom {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 2.5rem 6vw;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+    padding: 1.5rem 5vw;
+    text-align: center;
   }
   
   .bottomCol {
-    align-items: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .colTitle {
+    display: none; /* Hide titles to save vertical space */
+  }
+
+  .logoGroup {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .brandName {
+    margin-bottom: 0;
+  }
+  
+  .contactPhones {
+    align-items: center;
+    gap: 0.6rem;
+  }
+  
+  .contactIcons {
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .contactItem {
+    font-size: 0.75rem;
+  }
+
+  .iconItem {
+    width: 32px;
+    height: 32px;
   }
   
   .links {
-    flex-direction: column;
-    gap: 0.8rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem 1.2rem;
+  }
+  
+  .links a {
+    font-size: 0.75rem;
   }
   
   .copy {
