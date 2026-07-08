@@ -120,7 +120,7 @@ export default function Footer() {
           {/* LEFT: Logo & Brand */}
           <div className={styles.bottomCol}>
             <div className={styles.logoGroup}>
-              <img src="/logo.svg" alt="AquaLeaf Logo" style={{ height: '40px', width: 'auto' }} />
+              <img src="/logo.png" alt="AquaLeaf Logo" style={{ height: '40px', width: 'auto' }} />
               <div>
                 <p className={styles.brandName}>AquaLeaf Creation</p>
                 <p className={styles.tagline}>Living Architecture · Est. 2024</p>

@@ -61,7 +61,7 @@ export const metadata = {
     ],
   },
   icons: {
-    icon: '/logo.svg',
+    icon: '/logo.png',
   },
 }
 

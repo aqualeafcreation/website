@@ -16,7 +16,7 @@ export default function Navbar() {
       <nav className={`${styles.nav} ${isGallery ? styles.solidNav : ''}`} id="navbar">
         <div className={styles.logo}>
           <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}>
-            <img src="/logo.svg" alt="AquaLeaf Logo" style={{ height: '38px', width: 'auto' }} />
+            <img src="/logo.png" alt="AquaLeaf Logo" style={{ height: '38px', width: 'auto' }} />
             <span>AquaLeaf Creation</span>
           </a>
         </div>
