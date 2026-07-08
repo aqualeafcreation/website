@@ -10,7 +10,15 @@ export default function Philosophy() {
           loop
           muted
           playsInline
-          className={styles.videoBg}
+          className={`${styles.videoBg} ${styles.desktopVideo}`}
+        />
+        <video
+          src="/mobile/intro.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={`${styles.videoBg} ${styles.mobileVideo}`}
         />
         <div className={styles.imageOverlay} />
         
