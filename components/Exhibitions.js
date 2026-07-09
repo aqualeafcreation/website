@@ -74,17 +74,8 @@ export default function Exhibitions() {
               alt={item.alt}
               fill
               sizes="100vw"
-              className={`${styles.img} ${styles.desktopImg}`}
+              className={styles.img}
               style={{ objectFit: 'cover', objectPosition: 'center' }}
-            />
-            <Image
-              src={item.mobileImg}
-              alt={item.alt}
-              fill
-              sizes="100vw"
-              className={`${styles.img} ${styles.mobileImg}`}
-              style={{ objectFit: 'cover', objectPosition: 'center' }}
-              priority={item.id === 'dutch'}
             />
 
             <div className={styles.radialVignette} />

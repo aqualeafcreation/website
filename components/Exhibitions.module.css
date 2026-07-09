@@ -162,10 +162,6 @@
   filter: saturate(0.9) brightness(0.88);
 }
 
-.mobileImg {
-  display: none;
-}
-
 /* Radial vignette — center bright, edges very dark */
 .radialVignette {
   position: absolute;
@@ -277,11 +273,9 @@
 }
 
 @media (max-width: 768px) {
-  .desktopImg {
-    display: none;
-  }
-  .mobileImg {
-    display: block;
+  .imagePanel { 
+    height: 56.25vw; 
+    min-height: auto; 
   }
   /* iPhone/DSLR quality: Punchy colors, moderate contrast, and sharp rendering */
   .img {
@@ -292,5 +286,5 @@
 
 @media (max-width: 480px) {
   .panelContent { padding: 2rem 5vw; }
-  .imagePanel { height: 75vh; min-height: 380px; }
+  .imagePanel { height: 56.25vw; min-height: auto; }
 }
