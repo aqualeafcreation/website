@@ -5,7 +5,7 @@ export default function Philosophy() {
     <section className={styles.section} id="philosophy">
       <div className={`${styles.imageWrap} reveal reveal-d1`}>
         <video
-          src="/images/intro.mp4"
+          src="/images/desktop-intro.mp4"
           autoPlay
           loop
           muted
@@ -13,7 +13,7 @@ export default function Philosophy() {
           className={`${styles.videoBg} ${styles.desktopVideo}`}
         />
         <video
-          src="/mobile/intro.mp4"
+          src="/images/mobile-intro.mp4"
           autoPlay
           loop
           muted
